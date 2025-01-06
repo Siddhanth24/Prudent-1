@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prudent</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link rel="stylesheet" href="aboutus.css">    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-container">
+                <h1 class="logo">Prudent</h1>
+                <div class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Our_services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Contactus.html">Contact Us</a></li>
+                </div>
+                <a href="#contact-section" class="contact-us-button">Request A Quote</a>
+            </ul>
+        </nav>
+    </header>
+    <div class="intro">
+        <div class="text">
+            <h1>About<span class="intro-blue-text"> Us</span></h1>
+            <p>At Prudent, we help businesses and entrepreneurs thrive in the UAE's business environment. Whether you're starting a company, need accounting services, or expert guidance on Corporate Tax and VAT compliance, we provide reliable support.</p>
+        </div>
+        <div class="image">
+            <img src="7.png" alt="Buildings">
+        </div>
+    </div>
+    <div class="second-container">
+        <div class="box blue">
+            <h2>What Do We Specialize In?</h2>
+            <p>At Prudent, we specialize in helping businesses and entrepreneurs navigate the complex landscape of the UAE's business environment.</p>
+        </div>
+        
+        <div class="box white">
+            <h2>Who Are Our Clients?</h2>
+            <p>We assist businesses seeking expert guidance and are among the best consultants for setting up Mainland or Free Zone companies.</p>
+        </div>
+        
+        <div class="box black">
+            <h2>How Can We Support You?</h2>
+            <p>Whether you're starting a new company in Dubai/UAE or need reliable accounting services, we provide support every step of the way.</p>
+        </div>
+    </div>
+
+    <section class="Aboutus">
+        <div class="info-box">
+            <div class="info-image">
+                <img src="15.png" alt="Description of image">
+            </div>
+            <div class="info-text">
+                <h1><span class="intro-blue-text">Your Trusted Partner in UAE</span></h1>
+                <p>Established in 2021, Prudent has been a trusted partner for businesses looking to establish and grow their operations in the UAE.<br><br>
+
+                    With years of experience and a deep understanding of local laws and regulations, we provide customized solutions to meet the unique needs of each client.
+                    <br><br>
+                    Our team of seasoned professionals is committed to delivering excellence, ensuring that every aspect of your business, from setup to ongoing financial management, is handled with the utmost care and expertise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-section" class="contact-section">
+        <h1>Contact Us<span class="subset">Connect with Us: Let's Discuss Your Business Needs</span></h1>      
+        <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+                <div class="radio-container">
+                    <label class="radio">
+                        <input type="radio" name="option" value="Ask a Question" checked>
+                        <span class="radio-label">Ask a Question</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="option" value="Get a Quote">
+                        <span class="radio-label">Get a Quote</span>
+                    </label>
+                </div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="form-image">
+                <img src="9.png" alt="Illustration of a person at desk">
+            </div>
+            <script src="formData.js"></script>
+        </div>
+        </section>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="Our_services.html">Services</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="Contactus.html">Contact Us</a>
+                </div>
+                <div class="social">
+                    <a href="#"><img src="10.png" alt="Icon 1"></a>
+                    <a href="#"><img src="11.png" alt="Icon 2"></a>
+                    <a href="#"><img src="12.png" alt="Icon 2"></a>
+                </div>
+            </div>
+            <div class="footer-section contact-us">
+                <div class="left">
+                    <h3>Contact us:</h3>
+                    <p><br>Email: info@xyz.com</p>
+                    <p><br>Phone: 555-567-8901</p>
+                    <p><br>Address: 1234 Main St<br> Moonstone City, Stardust State 12345</p>
+                </div>
+                <div class="right">
+                    <form id="footerForm" action="http://localhost:5000/submit" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" value="Subscriber" style="display:none;"> <!-- Default value for name -->
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="message" value="None" style="display:none;">
+                        <input type="hidden" name="option" value="Subscribe to Newsletter">
+                        <button type="submit">Subscribe to news</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Prudent. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+              </div>
+            </div>
+        </div>    
+</body>
+</html>

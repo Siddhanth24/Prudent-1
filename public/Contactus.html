@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prudent</title>
+    <link rel="stylesheet" href="contactus.css">    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-container">
+                <h1 class="logo">Prudent</h1>
+                <div class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Our_services.html">Services</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="Contactus.html">Contact Us</a></li>
+                </div>
+                <a href="#contact-section" class="contact-us-button">Request A Quote</a>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="main-container">
+        <div class="left-side">
+            <div class="intro">
+                <div class="text">
+                    <h1>Contact <span class="intro-blue-text">Us</span></h1>
+                    <p>Ready to take your business to the next level?</p>
+                </div>
+            </div>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h3>Address</h3>
+                    <p>Your Address</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Email</h3>
+                    <p>info@prudent.com</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Phone</h3>
+                    <p>+971 5555 41538</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Phone</h3>
+                    <p>+97- 1 5212 82538</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Working Days</h3>
+                    <p>Monday - Saturday</p>
+                </div>
+                <div class="grid-item">
+                    <h3>Working Hours</h3>
+                    <p>10:00 am to 7:30 pm</p>
+                </div>
+            </div>
+        </div>
+        <div class="right-side">
+            <img src="14.png" alt="Description of image">
+        </div>
+    </div>
+    <section id="contact-section" class="contact-section">
+        <h1>Contact Us<span class="subset">Connect with Us: Let's Discuss Your Business Needs</span></h1>      
+        <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+                <div class="radio-container">
+                    <label class="radio">
+                        <input type="radio" name="option" value="Ask a Question" checked>
+                        <span class="radio-label">Ask a Question</span>
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="option" value="Get a Quote">
+                        <span class="radio-label">Get a Quote</span>
+                    </label>
+                </div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+            <div class="form-image">
+                <img src="9.png" alt="Illustration of a person at desk">
+            </div>
+            <script src="formData.js"></script>
+        </div>
+        </section>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="links">
+                    <a href="index.html">Home</a>
+                    <a href="Our_services.html">Services</a>
+                    <a href="aboutus.html">About Us</a>
+                    <a href="Contactus.html">Contact Us</a>
+                </div>
+                <div class="social">
+                    <a href="#"><img src="10.png" alt="Icon 1"></a>
+                    <a href="#"><img src="11.png" alt="Icon 2"></a>
+                    <a href="#"><img src="12.png" alt="Icon 2"></a>
+                </div>
+            </div>
+            <div class="footer-section contact-us">
+                <div class="left">
+                    <h3>Contact us:</h3>
+                    <p><br>Email: info@xyz.com</p>
+                    <p><br>Phone: 555-567-8901</p>
+                    <p><br>Address: 1234 Main St<br> Moonstone City, Stardust State 12345</p>
+                </div>
+                <div class="right">
+                    <form id="footerForm" action="http://localhost:5000/submit" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" value="Subscriber" style="display:none;"> <!-- Default value for name -->
+                        <input type="email" name="email" placeholder="Email" required>
+                        <input type="text" name="message" value="None" style="display:none;">
+                        <input type="hidden" name="option" value="Subscribe to Newsletter">
+                        <button type="submit">Subscribe to news</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Prudent. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+              </div>
+            </div>
+        </div>
+</body>
+</html>

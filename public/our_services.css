@@ -1,0 +1,928 @@
+body {
+    background-color: black;
+    font-family: Space Grotesk regular;
+    color: white; 
+    margin:25px 55px;
+}
+
+header {
+    color: white;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0; 
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center; 
+    font-size: 20px;
+    font-weight: normal;
+    gap: 40px; 
+    flex-grow: 1; 
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.contact-us-button {
+    font-size: 20px;
+    background-color: transparent; 
+    padding: 15px 30px; 
+    color: white; 
+    text-decoration: none;
+    border-radius: 14px;
+    border: 1px solid white; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+.contact-us-button:hover {
+    background-color: white; 
+    color: black; 
+}
+.intro {   
+    margin: 40px 0;  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro .text {
+    max-width: 600px;
+}
+
+.intro .text h1 {
+    font-size: 60px;
+}
+
+.intro .text p {
+    font-weight: normal;
+    font-size: 20px;
+    max-width: 550px;
+}
+
+.intro-blue-text {
+    color: #2A7EF8;
+}
+
+.intro .image {
+    margin-left: 30px;
+}
+
+.intro .image img {
+    width: 100%; 
+    max-width: 500px; 
+}
+
+.Service{
+    padding-top: 40px;
+}
+
+.Service h1 {
+    font-size: 40px;
+}
+
+.subset {
+    font-size: 18px;
+    padding-left: 50px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* One card per row */
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    background-color: #f5f5f5;
+    color: black;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.blue-card {
+    background-color: #2A7EF8; /* Set the blue color for these cards */
+    color: white; /* Ensure text is readable */
+}
+
+.card-content {
+    flex: 1;
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.card.company-setup.last-card .card-content p,
+.card.company-setup .card-content p {
+    color: black;
+}
+
+.card-image {
+    width: 150px;
+    height: auto;
+    border-radius: 25px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0 0 25px 25px;
+}
+
+.dark-card {
+    background-color: #222222; /* Dark background */
+    color: white;
+}
+
+.learn-more {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.card.blue-card .learn-more {
+    color: white;
+}
+.card.dark-card .learn-more {
+    color: white;
+}
+
+.arrow-circle {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.arrow {
+    color: white;
+    transform: rotate(-45deg); /* Rotates the arrow to point northwest */
+    font-size: 18px;
+}
+
+.contact-section {
+    padding-top: 40px;
+}
+.contact-section h1{
+    font-size: 40px;
+}
+
+.contact-form-container {
+    background-color: #000000; 
+    padding: 10px 40px; 
+    border-radius: 45px; 
+    border: 2px solid #FFFFFF; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.contact-form {
+    width: 50%;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.radio input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;  /* White border for unselected */
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio input[type="radio"]:checked {
+    background-color: transparent;
+    border: 2px solid #ffffff; /* Border remains white when selected */
+}
+
+.radio input[type="radio"]:checked::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: #0057ff; /* Blue inner circle */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.radio-label {
+    color: white;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+} 
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+button.submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #4460f1;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+.footer {
+    margin-top: 40px;
+    background-color: #2A7EF8;
+    border-radius: 45px;
+    padding: 40px 60px;
+    color: #fff;
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between links and logos */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Full width */
+}
+
+.footer-section {
+    display: flex; /* Use flexbox for footer sections */
+    align-items: center; /* Align items vertically within sections */
+    justify-content: space-between; /* Space out child elements */
+    width: 100%; /* Full width */
+}
+.footer-section h3
+{
+    font-size: 20px;
+}
+.footer-section p{
+    font-size: 18px;
+}
+
+.links {
+    font-size: 18px;
+    display: flex; /* Use flexbox for links */
+    justify-content: center; /* Center the links */
+    gap: 15px; /* Space between links */
+    flex: 1; /* Allow it to grow to fill available space */
+}
+
+.links a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Align social icons to the right */
+.social {
+    display: flex; /* Use flexbox for social icons */
+    justify-content: flex-end; /* Align social icons to the right */
+    gap: 15px; /* Space between social icons */
+}
+
+.social a img {
+    width: 24px; /* Set the size of the social icons */
+}
+.footer-section .right{
+    padding-right: 130px ;
+}
+
+.footer-section input[type="email"] {
+    width: 285px; /* Set width to 285 pixels */
+    padding: 10px; /* Padding for better spacing */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid white; /* Thin white border */
+    background-color: #2A7EF8; /* Blue background */
+    color: white; /* Text color */
+}
+
+/* Style the placeholder text */
+.footer-section input[type="email"]::placeholder {
+    color: white; /* White placeholder text */
+    opacity: 0.8; /* Slightly transparent */
+}
+
+.footer-section button {
+    border: none;
+    background-color: #2A7EF8;
+    color: white;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.footer-section button:hover {
+    background-color: black;
+    color: white; /* Keep text color white */
+}
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #A7A9BE; /* Border at the top */
+    padding-top: 10px; /* Space above the border */
+    margin-top: 10px; /* Space between form and border */
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px; /* Padding inside the footer section */
+    margin-bottom: 10px; /* Space between the form and footer-bottom */
+}
+.right button{
+    font-size: 20px;
+}
+
+/* Mobile Responsiveness */
+@media(max-width: 871px) {
+    body { 
+        margin: 1em 3em; /* Adjusted for better spacing */
+        box-sizing: border-box;
+    }
+
+    .logo {
+        font-size: 1em; /* Increased logo size */
+    }
+    .nav-links {
+        font-size: 1em; /* Increased nav link font size */
+        gap: 0.5em; 
+    }
+    .contact-us-button {
+        font-size: 1em; 
+        padding: 0.8em 1em; 
+    }
+
+    /* Text in intro section */
+    .intro .text h1 {
+        font-size: 1.8em; /* Slightly bigger heading */
+    }
+    .intro .text p {
+        font-size: 1em; /* Increased paragraph font size */
+    }
+
+    /* Adjusting image inside intro */
+    .intro .image {
+        margin-left: 3em; /* Adjust for smaller screens */
+        width: 30%; /* Ensure the container stretches */
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro .image img {
+        width: 90%; /* Resize image to fit container */
+        height: auto; /* Keep aspect ratio intact */
+        display: block; /* Remove any inline-block spacing */
+        margin: 0 auto; /* Center the image */
+    }
+
+    /* Service Section */
+    .Service {
+        padding-top: 0.5em;
+    }
+
+    .Service h1 {
+        font-size: 1.8em;
+    }
+
+    .subset {
+        font-size: 0.4em;
+        padding-left: 3em;
+    }
+
+    /* Cards section */
+    .card-grid {
+        padding-top: 10px;
+        gap: 15px;
+    }
+
+    .card h2 {
+        font-size: 0.7em;
+        margin-bottom: 1.2em;
+    }
+
+    .card-image {
+        width: 6em;
+    }
+
+    .card img {
+        max-width: 90%;
+        border-radius: 0 0 20px 20px;
+    }
+
+    /* Learn More Button */
+    .learn-more {
+        font-size: 0.7em;
+    }
+
+    .arrow-circle {
+        width: 2em;
+        height: 2em;
+        margin-right: 0.3em;
+    }
+
+    .arrow {
+        font-size: 1em;
+    }
+
+    /* Contact Section */
+    .contact-form-container {
+        padding: 25px;
+    }
+
+    .contact-section h1 {
+        font-size: 1.8em;
+    }
+
+    .radio-label {
+        font-size: 1em;
+    }
+
+    .radio input[type="radio"] {
+        width: 1em; /* Further reduce size */
+        height: 1em;
+        margin-right: 0.4em;
+    }
+
+    .radio input[type="radio"]:checked::before {
+        width: 0.45em; /* Further reduce the inner circle size */
+        height: 0.45em;
+    }
+
+    label {
+        margin-bottom: 8px;
+        font-size: 1em;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 75%;
+        height: 45%;
+        padding: 8px;
+        font-size: 1em;
+        margin-bottom: 1.2em;
+        border-radius: 8px;
+    }
+
+    button.submit-button {
+        width: 85%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    /* Image in form */
+    .form-image img {
+        width: 10em;  
+        height: 100%; 
+        object-fit: contain; 
+    }
+
+    /* Footer section */
+    .footer-section h3 {
+        font-size: 1em;
+    }
+
+    .footer-section p {
+        font-size: 1em;
+    }
+
+    .links {
+        font-size: 1em;
+        gap: 0.7em;
+    }
+
+    .social a img {
+        width: 1em;
+    }
+
+    .footer {
+        margin-top: 40px;
+        background-color: #2A7EF8;
+        border-radius: 45px;
+        padding: 35px 45px;
+        color: #fff;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .footer-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .links {
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 0.7em;
+        flex: 1;
+    }
+
+    .social {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .social a img {
+        width: 1.2em;
+    }
+
+    .footer-section .right {
+        padding-right: 12px;
+    }
+
+    .footer-section input[type="email"] {
+        width: 7em; 
+        font-size: 1em;
+        padding: 8px;
+        border-radius: 10px;
+        border: 1px solid white;
+        background-color: #2A7EF8;
+        color: white;
+    }
+
+    .footer-section input[type="email"]::placeholder {
+        color: white;
+        opacity: 0.8;
+    }
+
+    .footer-section button {
+        padding: 6px 8px;
+        border-radius: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 1em;
+        text-align: center;
+        border-top: 1px solid #A7A9BE;
+        padding-top: 12px;
+        margin-top: 12px;
+    }
+
+    .footer-section {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 12px;
+    }
+
+    .right {
+        padding-left: 1.5em;
+    }
+
+    .right button {
+        font-size: 0.8em;
+        margin-left: 1em;
+    }
+}
+@media(max-width: 580px) {
+    body { 
+        margin: 0.8em 2.7em; /* 25px 55px */
+        box-sizing: border-box; /* Ensures padding and margins don't add extra width */
+    }
+
+    .logo {
+        font-size: 0.7em;
+    }
+    .nav-links {
+        font-size: 0.6em;
+        gap: 0.4em; 
+    }
+    .contact-us-button {
+        font-size: 0.6em; 
+        padding: 0.7em 0.8em; 
+    }
+    .intro .text {
+        max-width: 10em; 
+    }
+    
+    .intro .text h1 {
+        font-size: 1em; 
+    }
+
+    .intro .text p {
+        font-weight: normal;
+        font-size: 0.6em; 
+    }
+
+    .intro button {
+        background-color: #2A7EF8;
+        font-size: 0.6em; /* 20px */
+        padding: 0.7em 1em; /* 12px 27px */
+    }
+
+    .intro .image {
+        margin-left: 3em; /* 30px */
+    }
+    
+    .intro .image img {
+        width: 90%; 
+    }
+
+    /* Service Section */
+    .Service{
+        padding-top: 0.2em;
+    }
+    .Service h1 {
+        font-size: 1.5em;
+    }
+    .subset {
+        font-size: 0.4em;
+        padding-left: 2.6em;
+        display: inline;    
+    }
+
+    .card-grid {
+        padding-top: 10px;
+        gap: 20px;
+    }
+    .card h2 {
+        font-size: 0.6em;
+        margin-bottom: 1.5em;
+    }
+    .card p {
+        font-size: 0.55em; /* Reduced font size */
+    }
+    .card-image {
+        width: 5em;
+    }
+    .card img {
+        max-width: 90%;
+        border-radius: 0 0 25px 25px;
+    }
+    .learn-more {
+        font-size: 0.6em;
+    }
+    .arrow-circle {
+        width: 15px;
+        height: 15px;
+    }
+    .arrow {
+        color: white;
+        transform: rotate(-45deg); /* Rotates the arrow to point northwest */
+        font-size: 1em;
+    }
+    .arrow-circle-1 {
+        width: 15px;
+        height: 15px;
+    }
+    .arrow-1 {
+        color: rgb(0, 0, 0);
+        transform: rotate(-45deg); /* Rotates the arrow to point northwest */
+        font-size: 1em;
+    }
+    .contact-form-container{
+        padding:30px;
+    }
+    .contact-section h1{
+        font-size: 1.5em;
+    } 
+    
+    .contact-section {
+        padding-top: 1.4em;
+    }
+
+    .radio-label {
+        font-size: 0.8em;
+    }
+
+    .radio input[type="radio"] {
+        width: 15px;
+        height: 15px;
+    }
+
+    label {
+        margin-bottom: 5px;
+        font-size: 0.8em;
+    } 
+
+    input[type="text"], input[type="email"], textarea {
+        width: 60%;
+        height: 40%;
+        padding: 5px;
+        font-size: 0.7em;
+        margin-bottom: 1em;
+        border-radius: 8px;
+    }
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 7px;
+        background-color: #0057ff; /* Blue inner circle */
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    textarea {
+        padding: 5px; /* Adjust padding to reduce height */
+        font-size: 0.7em; /* Smaller font size */
+        height: 6em; /* Set a specific height to control the size */
+        margin-bottom: 15px; /* Adjust margin if needed */
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+
+    button.submit-button {
+        width: 80%;
+        padding: 7px;
+        font-size: 0.6em;
+    }
+
+    .form-image img {
+            width: 8.5em;  
+            height: 100%; 
+            object-fit: contain; 
+    }
+    .footer-section h3
+    {
+     font-size: 0.8em;
+    }
+
+    .footer-section p{
+        font-size: 0.6em;
+    }
+    .links {
+        font-size: 0.6em;
+        gap: 0.5em;
+    }
+
+    .social a img {
+        width: 0.5em; /* Set the size of the social icons */
+    }
+    
+    .footer {
+        margin-top: 40px;
+        background-color: #2A7EF8;
+        border-radius: 45px;
+        padding: 30px 40px;
+        color: #fff;
+    }
+    
+    .footer-content {
+        display: flex; /* Use flexbox for layout */
+        justify-content: space-between; /* Space between links and logos */
+        align-items: center; /* Align items vertically */
+        width: 100%; /* Full width */
+        flex-wrap: nowrap; /* Prevent items from wrapping to a new line */
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+    
+    .footer-section {
+        display: flex; /* Use flexbox for footer sections */
+        align-items: center; /* Align items vertically within sections */
+        justify-content: space-between; /* Space out child elements */
+        width: 100%; /* Full width */
+    }
+    .footer-section h3
+    {
+        font-size: 0.6em;
+    }
+    .footer-section p{
+        font-size: 0.6em;
+    }
+    
+    .links {
+        font-size: 0.5em;
+        display: flex; /* Use flexbox for links */
+        justify-content: center; /* Center the links */
+        gap: 0.5em; /* Space between links */
+        flex: 1; 
+    }
+        
+    .social {
+        display: flex; /* Use flexbox for social icons */
+        justify-content: flex-end; /* Align social icons to the right */
+        gap: 15px; /* Space between social icons */
+    }
+    
+    .social a img {
+        width: 0.6em; /* Set the size of the social icons */
+    }
+    .footer-section .right{
+        padding-right: 10px ;
+    }
+ 
+    .footer-section input[type="email"] {
+        width: 5em; 
+        font-size: 0.6em;
+        padding: 5px; /* Padding for better spacing */
+        border-radius: 10px; /* Rounded corners */
+        border: 1px solid white; /* Thin white border */
+        background-color: #2A7EF8; /* Blue background */
+        color: white; /* Text color */
+    }
+    
+    /* Style the placeholder text */
+    .footer-section input[type="email"]::placeholder {
+        color: white; /* White placeholder text */
+        opacity: 0.8; /* Slightly transparent */
+    }
+    
+    .footer-section button {
+        padding: 4px 5px;
+        border-radius: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 0.6em;
+        text-align: center;
+        border-top: 1px solid #A7A9BE; /* Border at the top */
+        padding-top: 10px; /* Space above the border */
+        margin-top: 10px; /* Space between form and border */
+    }
+    
+    .footer-section {
+        width: 100%;
+        padding: 0px; /* Padding inside the footer section */
+        margin-bottom: 10px; /* Space between the form and footer-bottom */
+    }
+
+    .right{
+        padding-left: 1em;
+    }
+    .right button{
+        font-size: 0.5em;
+        margin-left: 0em;
+    }
+  
+}
+@media(max-width:480px){
+    .subset {
+        font-size: 0.4em;
+        padding-left: 0em;
+        display: block;
+    }
+}
+
+
+
+
+
