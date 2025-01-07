@@ -1,19 +1,14 @@
-const mysql = require("mysql2");
+const mysql = require("mysql2/promise");
 
-const db = mysql.createConnection({
+const pool = mysql.createPool({
   host: "sql12.freesqldatabase.com",
   user: "sql12756255",
   password: "P5wXTUceKQ",
   database: "sql12756255",
   port: 3306,
-});
-
-db.connect((err) => {
-  if (err) {
-    console.error("Database connection failed: " + err.stack);
-    return;
-  }
-  console.log("Connected to the database.");
+  waitForConnections: true,
+  connectionLimit: 5,
+  queueLimit: 0,
 });
 
 module.exports = async (req, res) => {
@@ -27,13 +22,19 @@ module.exports = async (req, res) => {
     return res.status(400).json({ error: "All fields are required" });
   }
 
-  const query = "INSERT INTO contacts (name, email, message, option_selected) VALUES (?, ?, ?, ?)";
-  db.query(query, [name, email, message, option_selected], (err) => {
-    if (err) {
-      console.error("Database insert error: ", err);
-      return res.status(500).json({ error: "Failed to save data" });
-    }
+  const query =
+    "INSERT INTO contacts (name, email, message, option_selected) VALUES (?, ?, ?, ?)";
+
+  try {
+    const connection = await pool.getConnection(); // Get a connection from the pool
+    await connection.query(query, [name, email, message, option_selected]);
+    connection.release(); // Release the connection back to the pool
+
     return res.status(200).json({ message: "Data saved successfully!" });
-  });
+  } catch (err) {
+    console.error("Database error: ", err);
+    return res.status(500).json({ error: "Failed to save data" });
+  }
 };
+
 
