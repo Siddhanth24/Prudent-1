@@ -355,64 +355,64 @@
                     </div>
                 </div>    
                 <script>
-                    // Handle submission for the contact form
-                    document.getElementById("contact-form").addEventListener("submit", async (event) => {
-                        event.preventDefault();
-                
-                        const formData = {
-                            name: document.getElementById("name").value,
-                            email: document.getElementById("email").value,
-                            message: document.getElementById("message").value,
-                            option_selected: document.querySelector('input[name="option_selected"]:checked').value,
-                        };
-                
-                        try {
-                            const response = await fetch("/api/submit", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify(formData),
-                            });
-                
-                            if (!response.ok) {
-                                throw new Error("Failed to submit data");
-                            }
-                
-                            const data = await response.json();
-                            alert(data.message || "Form submitted successfully!");
-                        } catch (error) {
-                            console.error("Error:", error.message);
-                            alert("Failed to submit the form. Please try again.");
-                        }
-                    });
-                
-                    // Handle submission for the footer form
-                    document.getElementById("footer-form").addEventListener("submit", async (event) => {
-                        event.preventDefault();
-                
-                        const formData = {
-                            name: "Subscriber", // Default value
-                            email: document.getElementById("footer-email").value, // Footer email input
-                            message: "None", // Default value
-                            option_selected: "Subscribe to Newsletter", // Fixed value for footer form
-                        };
-                
-                        try {
-                            const response = await fetch("/api/submit", {
-                                method: "POST",
-                                headers: { "Content-Type": "application/json" },
-                                body: JSON.stringify(formData),
-                            });
-                
-                            if (!response.ok) {
-                                throw new Error("Failed to submit data");
-                            }
-                
-                            const data = await response.json();
-                            alert(data.message || "Subscription successful!");
-                        } catch (error) {
-                            console.error("Error:", error.message);
-                            alert("Failed to submit the subscription. Please try again.");
-                        }
-                    });
-                </script>    
+                    // Contact Form Submission
+document.getElementById("contact-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+  
+    const formData = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value,
+        option_selected: document.querySelector('input[name="option_selected"]:checked').value,
+    };
+  
+    try {
+        const response = await fetch("/api/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to submit data");
+        }
+
+        const data = await response.json();
+        alert(data.message || "Form submitted successfully!");
+    } catch (error) {
+        console.error("Error:", error.message);
+        alert("Failed to submit the form. Please try again.");
+    }
+});
+
+// Footer Form Submission
+document.getElementById("footer-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+  
+    const formData = {
+        name: "Subscriber",
+        email: document.getElementById("footer-email").value,
+        message: "None",
+        option_selected: document.getElementById("footer-option").value,
+    };
+  
+    try {
+        const response = await fetch("/api/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+            throw new Error("Failed to submit data");
+        }
+
+        const data = await response.json();
+        alert(data.message || "Subscription successful!");
+    } catch (error) {
+        console.error("Error:", error.message);
+        alert("Failed to subscribe. Please try again.");
+    }
+});
+     </script>    
     </body>
