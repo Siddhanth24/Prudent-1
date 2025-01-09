@@ -340,7 +340,7 @@
                             <p><br>Address: 1234 Main St<br> Moonstone City, Stardust State 12345</p>
                         </div>
                         <div class="right">
-                            <form id="footer-form" class="footer-form">
+                            <form id="footer-form" action="/api/submit" method="POST" class="footer-form">
                                 <input type="text" name="name" placeholder="Your Name" value="Subscriber" style="display:none;"> <!-- Default value for name -->
                                 <input type="email" name="email" placeholder="Email" required>
                                 <input type="text" name="message" value="None" style="display:none;">
@@ -390,7 +390,7 @@
                         event.preventDefault();
                 
                         const formData = {
-                            name: "None", // Default value
+                            name: "Subscriber", // Default value
                             email: document.getElementById("footer-email").value, // Footer email input
                             message: "None", // Default value
                             option_selected: "Subscribe to Newsletter", // Fixed value for footer form
