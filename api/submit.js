@@ -1,6 +1,15 @@
-const mysql = require("mysql2/promise");
+const express = require("express");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const mysql = require("mysql2");
 
-const pool = mysql.createPool({
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+const pool = mysql.createConnection({
   host: "sql12.freesqldatabase.com",
   user: "sql12756703",
   password: "SRBYgWGna3",
