@@ -316,8 +316,6 @@
                     <div class="form-image">
                         <img src="9.png" alt="Illustration of a person at desk">
                     </div>
-                    <script src="submitContact.js"></script>
-                    <script src="submitFooter.js"></script>
     <script>               
     document.getElementById("contact-form").addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -381,9 +379,70 @@
                             </form>
                         </div>                        
                     </div>
-                             <div class="footer-bottom">
+                    <div class="footer-bottom">
                         <p>© 2024 Prudent. All Rights Reserved. <a href="#">Privacy Policy</a></p>
-                      </div>
                     </div>
-                </div>        
+                    </div>
+                </div>
+                <script>
+                    document.getElementById("contact-form").addEventListener("submit", async (event) => {
+                      event.preventDefault();
+                  
+                      const formData = {
+                        name: document.getElementById("name").value,
+                        email: document.getElementById("email").value,
+                        message: document.getElementById("message").value,
+                        option_selected: document.querySelector('input[name="option_selected"]:checked').value,
+                      };
+                  
+                      try {
+                        const response = await fetch("/api/submit", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify(formData),
+                        });
+                  
+                        if (!response.ok) {
+                          throw new Error("Failed to submit data");
+                        }
+                  
+                        const data = await response.json();
+                        alert(data.message || "Form submitted successfully!");
+                      } catch (error) {
+                        console.error("Error:", error.message);
+                        alert("Failed to submit the form. Please try again.");
+                      }
+                    });
+                  
+                    document.getElementById("footer-form").addEventListener("submit", async (event) => {
+                      event.preventDefault();
+                  
+                      const formData = {
+                        name: document.querySelector('#footer-form input[name="name"]').value,
+                        email: document.querySelector('#footer-form input[name="email"]').value,
+                        message: document.querySelector('#footer-form input[name="message"]').value,
+                        option_selected: document.querySelector('#footer-form input[name="option_selected"]').value,
+                      };
+                  
+                      try {
+                        const response = await fetch("/api/submit", {
+                          method: "POST",
+                          headers: { "Content-Type": "application/json" },
+                          body: JSON.stringify(formData),
+                        });
+                  
+                        if (!response.ok) {
+                          throw new Error("Failed to submit data");
+                        }
+                  
+                        const data = await response.json();
+                        alert(data.message || "Subscription successful!");
+                  
+                        document.getElementById("footer-form").reset();
+                      } catch (error) {
+                        console.error("Error:", error.message);
+                        alert("Failed to submit the form. Please try again.");
+                      }
+                    });
+                  </script>        
     </body>
