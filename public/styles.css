@@ -18,9 +18,15 @@ header {
 }
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: left;
+    display: flex;               /* Ensures the image aligns correctly */
+    align-items: center;         /* Vertically centers the image */
+    justify-content: flex-start; /* Aligns the image to the left */
+}
+
+.logo img {
+    width: 5em;    /* Use 'em' to set width relative to font size */
+    max-width: 4.5em; /* Maximum size for larger screens */
+    height: auto;   /* Maintain the aspect ratio */
 }
 
 .nav-links {
@@ -239,6 +245,7 @@ html {
 
 .Aboutus{
     padding-top: 40px;
+    text-align: justify;
 
 }
 
@@ -358,6 +365,7 @@ html {
     overflow: hidden;  /* Ensure the image doesn't overflow */
     margin: 20px auto;  /* Center the box horizontally */
     padding: 60px 70px;
+    text-align: justify;
     justify-content: space-between;  /* Align the content */
 }
 
@@ -417,9 +425,11 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    
 }
 
 .benefit {
+    text-align: justify;
     background-color: #F2F7FF;
     color: #000;
     border-radius: 45.82px;
@@ -521,54 +531,9 @@ html {
     padding-top: 40px;
 }
 
-.testimonials h1{
-    font-size: 40px;
-}
 .h1{
     font-size:40px;
 }
-
-.testimonial-wrapper {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-.testimonial-container {
-    display: flex;
-    transition: transform 0.5s ease; /* Smooth transition */
-    width: 100%;
-}
-
-.testimonial-box {
-
-    padding: 30px 30px 40px 30px;
-    border-radius: 20px;
-    width: 100%;
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s; /* Smooth fade effect and delay visibility toggle */
-    position: absolute; /* Keep boxes in the same position */
-    top: 0;
-    left: 0;
-    visibility: hidden; /* Hide it without affecting layout */
-}
-
-.testimonial-box.active {
-    opacity: 1;
-    visibility: visible; /* Show active testimonial */
-    transition: opacity 0.5s ease-in-out, visibility 0s; /* Reset visibility immediately */
-}
-
-
-.testimonial-wrapper {
-    position: relative;
-    min-height: 250px; /* Set a min-height to preserve the shape of the container */
-}
-
 
 .info-box-12 {
     padding-top: 30px;
@@ -580,27 +545,6 @@ html {
     margin: 20px auto;  /* Center the box horizontally */
     padding: 60px 70px;
     justify-content: space-between;  /* Align the content */
-}
-
-
-.testimonial-text {
-    font-size: 18px;
-    line-height: 1.6;
-}
-
-.testimonial-author {
-    font-size: 14px;
-    font-weight: bold;
-    margin-top: 20px;
-    
-}
-
-/* Navigation Dots */
-.testimonial-navigation {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .nav-arrow {
@@ -1078,38 +1022,6 @@ button.submit-button {
         width: 100%;
     }
 
-    .testimonials h1 {
-        font-size: 1.8em; /* Adjusted title size */
-    }
-
-    .testimonial-container {
-        display: flex;
-        transition: transform 0.5s ease;
-        width: 100%;
-    }
-
-    .testimonial-box {
-        padding: 18px 22px;
-        border-radius: 18px;
-        width: 100%;
-        box-sizing: border-box;
-        text-align: center;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out, visibility 0s linear 0.5s;
-        position: absolute;
-        visibility: hidden;
-    }
-
-    .testimonial-box.active {
-        opacity: 1;
-        visibility: visible;
-        transition: opacity 0.5s ease-in-out, visibility 0s;
-    }
-
-    .testimonial-wrapper {
-        position: relative;
-        min-height: 150px;
-    }
 
     .info-box-12 {
         padding-top: 25px;
@@ -1267,7 +1179,6 @@ button.submit-button {
     .footer-section .right {
         padding-right: 12px;
     }
-
     .footer-section input[type="email"] {
         width: 7em; 
         font-size: 1em;
@@ -1337,14 +1248,14 @@ button.submit-button {
     }
     .contact-us-button {
         font-size: 0.6em; 
-        padding: 0.7em 0.8em; 
+        padding: 0.6em 0.7em; 
     }
     .intro .text {
-        max-width: 10em; 
+        max-width: 20em; 
     }
     
     .intro .text h1 {
-        font-size: 1em; 
+        font-size: 1.3em; 
     }
 
     .intro .text p {
@@ -1821,4 +1732,16 @@ button.submit-button {
         width: 5px;
         height: 7px;
     }
+}
+@media (max-width: 410px){
+    .intro .text h1 {
+        font-size: 1.1em; 
+    }
+}
+@media (max-width: 400px){
+    .logo img {
+        width: 4em;    /* Use 'em' to set width relative to font size */
+        max-width: 3.5em; /* Maximum size for larger screens */
+        height: auto;   /* Maintain the aspect ratio */
+    }   
 }

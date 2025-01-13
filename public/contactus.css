@@ -18,9 +18,15 @@ header {
 }
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: left;
+    display: flex;               /* Ensures the image aligns correctly */
+    align-items: center;         /* Vertically centers the image */
+    justify-content: flex-start; /* Aligns the image to the left */
+}
+
+.logo img {
+    width: 5em;    /* Use 'em' to set width relative to font size */
+    max-width: 4.5em; /* Maximum size for larger screens */
+    height: auto;   /* Maintain the aspect ratio */
 }
 
 .nav-links {
@@ -86,51 +92,35 @@ header {
 }
 
 /* Grid container for contact information */
-.grid-container {
+.grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for grid items */
-    grid-gap: 20px; /* Space between grid items */
-    max-width: 800px; /* Limit width */
-    margin-top: 15px;
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row by default */
+    gap: 15px;
+    max-width: 700px;
 }
 
-.grid-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative; /* Required for the pseudo-element */
-    border: 2px solid #2A7EF8; /* Blue border */
-    background-color: rgba(255, 255, 255, 0.05); /* Semi-transparent background */
-    color: white;
-    padding: 15px 20px; /* Reduced padding for compact height */
-    border-radius: 10.75px; /* Rounded corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-}
-.grid-item::before {
-    content: "";
-    position: absolute;
-    top: 15%; /* Position the line vertically */
-    bottom: 15%; /* Ensure the line doesn't go edge to edge */
-    left: 43%; /* Place the line in the center */
-    width: 2px; /* Thickness of the line */
-    background-color: #2A7EF8; /* Blue color for the line */
+.grid .full-width {
+    grid-column: span 2; /* Makes the Address span across two columns */
 }
 
-.grid-item h3 {
-    font-size: 16px;
-    font-weight: 500;
+.grid div {
+    background-color: black;
+    padding: 15px;
+    border-radius: 20px;
+    border: 1px solid #2A7EF8;
+}
+
+.grid div span {
+    display: block;
+    font-size: 1.35rem;
     color: #2A7EF8;
-    margin: 0;
-    
+    margin-bottom: 5px;
+}
+.grid div p {
+    font-size: 1.25rem; /* Keep the paragraph text size consistent */
 }
 
-.grid-item p {
-    font-size: 16px;
-    margin: 0;
-    padding-left: 20px;
-}
-
-/* Main container */
+/* Main container layout */
 .main-container {
     display: flex; /* Ensure left and right sides align next to each other */
 }
@@ -141,13 +131,17 @@ header {
     align-items: center; 
     justify-content: center; 
     padding-left: 20px; 
+    margin: 0 auto;
 }
 
 .right-side img {
-    padding-top: 20px;
-    max-width: 150%; /* Ensures image stays responsive */
+    max-width: 100%; /* Keeps the image responsive */
     height: auto; /* Maintain aspect ratio */
-    transform: translateX(28%); /* Adjust horizontal position if needed */
+    transform: none;
+}
+/* Main container */
+.main-container {
+    display: flex; /* Ensure left and right sides align next to each other */
 }
 
 .subset {
@@ -224,6 +218,7 @@ header {
     color: white;
     font-size: 16px;
 }
+
 
 label {
     display: block;
@@ -353,7 +348,200 @@ button.submit-button {
 .right button{
     font-size: 20px;
 }
+@media(max-width:871px){
+    .grid div span {
+        font-size: 1rem;
+    }
+    .grid div p {
+        font-size: 0.8rem; /* Keep the paragraph text size consistent */
+    }
+    .contact-form-container {
+        padding: 25px;
+    }
+    .contact-section h1 {
+        font-size: 1.8em;
+    } 
 
+    .contact-section {
+        padding-top: 1.6em;
+    }
+
+    .radio-label {
+        font-size: 1em;
+    }
+
+    .radio input[type="radio"] {
+        width: 18px;
+        height: 18px;
+    }
+
+    label {
+        margin-bottom: 8px;
+        font-size: 1em;
+    }
+
+    input[type="text"], input[type="email"], textarea {
+        width: 75%;
+        height: 45%;
+        padding: 8px;
+        font-size: 1em;
+        margin-bottom: 1.2em;
+        border-radius: 8px;
+    }
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 7px;
+        height: 9px;
+        background-color: #0057ff;
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    textarea {
+        padding: 8px;
+        font-size: 1em;
+        height: 7em;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+
+    button.submit-button {
+        width: 85%;
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .form-image img {
+        width: 10em;  
+        height: 100%; 
+        object-fit: contain; 
+    }
+
+    .footer-section h3 {
+        font-size: 1em;
+    }
+
+    .footer-section p {
+        font-size: 1em;
+    }
+
+    .links {
+        font-size: 1em;
+        gap: 0.7em;
+    }
+
+    .social a img {
+        width: 1em;
+    }
+
+    .footer {
+        margin-top: 40px;
+        background-color: #2A7EF8;
+        border-radius: 45px;
+        padding: 35px 45px;
+        color: #fff;
+    }
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+    }
+
+    .footer-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .footer-section h3 {
+        font-size: 1em;
+    }
+    .footer-section p {
+        font-size: 1em;
+    }
+
+    .links {
+        font-size: 1em;
+        display: flex;
+        justify-content: center;
+        gap: 0.7em;
+        flex: 1;
+    }
+
+    .social {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .social a img {
+        width: 1.2em;
+    }
+
+    .footer-section .right {
+        padding-right: 12px;
+    }
+    .footer-section input[type="email"] {
+        width: 7em; 
+        font-size: 1em;
+        padding: 8px;
+        border-radius: 10px;
+        border: 1px solid white;
+        background-color: #2A7EF8;
+        color: white;
+    }
+
+    .footer-section input[type="email"]::placeholder {
+        color: white;
+        opacity: 0.8;
+    }
+
+    .footer-section button {
+        padding: 6px 8px;
+        border-radius: 5px;
+    }
+
+    .footer-bottom {
+        font-size: 1em;
+        text-align: center;
+        border-top: 1px solid #A7A9BE;
+        padding-top: 12px;
+        margin-top: 12px;
+    }
+
+    .footer-section {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 12px;
+    }
+
+    .right {
+        padding-left: 1.5em;
+    }
+
+    .right button {
+        font-size: 0.8em;
+        margin-left: 1em;
+    }
+
+}
+@media (max-width: 830px){
+     
+    .grid div span {
+        font-size: 0.9rem
+    }
+    .grid p{
+        font-size: 0.8rem;
+    }
+    
+}
 @media (max-width: 780px) {
     body { 
         margin: 1em 3em; /* Adjusted for better spacing */
@@ -373,7 +561,6 @@ button.submit-button {
     }
     .intro .text {
         max-width: 80%;
-        padding: 1em;
     }
     .subset {
         font-size: 0.4em;
@@ -386,45 +573,14 @@ button.submit-button {
     }
     .intro .text p {
         font-size: 1em; /* Increased paragraph font size */
-        margin-bottom: -1.5em; 
+        margin-bottom: -1.2em; 
     }
 
-    /* Adjusting image inside intro */
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns per row */
-        gap: 1.25em; /* Converted 10px to em */
-        padding: 0 1.25em; /* Converted 10px to em */
+    .grid div span {
+        font-size: 0.8rem
     }
-
-    .grid-item {
-        padding: 0.625em 0.75em; /* Converted 10px and 12px to em */
-        width: 100%; /* Ensure grid item fits within the container */
-        box-sizing: border-box; /* Ensure padding doesn't stretch the item */
-        border-radius: 0.5em; /* Converted 8px to em */
-        font-size: 0.875em; /* Converted 14px to em */
-    }
-
-    .grid-item h3 {
-        font-size: 0.875em; /* Converted 14px to em */
-        margin-bottom: 0.3125em; /* Converted 5px to em */
-    }
-
-    .grid-item p {
-        font-size: 0.875em; /* Converted 14px to em */
-    }
-
-    .right-side {
-        flex: 1 1 100%; /* Make the image container take full width on small screens */
-        padding-left: 0;
-        overflow: hidden; /* Prevent image overflow */
-        max-width: calc(100% - 6em); /* Ensure it fits within the margin */
-    }
-
-    .right-side img {
-        max-width: 100%; /* Ensure image fits within its container */
-        height: auto; /* Maintain aspect ratio */
-        display: block; /* Remove any inline-block spacing */
-        margin: 0 auto; /* Center the image */
+    .grid p{
+        font-size: 0.7rem;
     }
     .contact-form-container {
         padding: 25px;
@@ -577,6 +733,28 @@ button.submit-button {
         margin-left: 1em;
     }
 }
+@media(max-width: 735px) {
+    /* Grid container adjustments */
+    .grid {
+        max-width: 1000px; /* Increase the grid size */
+        gap: 10px; /* Adjust the gap between grid items for better spacing on smaller screens */
+    }
+    
+    .grid div span {
+        font-size: 0.8rem; /* Keep the span text size consistent */
+    }
+    
+    .grid div p {
+        font-size: 0.7rem; /* Keep the paragraph text size consistent */
+    }
+    
+    /* Reduce the image size */
+    .right-side img {
+        max-width: 60%; /* Reduce the image width for better responsiveness */
+        height: auto; /* Maintain the aspect ratio */
+        margin: 0 auto; /* Center the image horizontally */
+    }
+}
 @media (max-width: 580px) {
     body { 
         margin: 0.8em 2.7em; /* 25px 55px */
@@ -602,12 +780,6 @@ button.submit-button {
     .intro .text p{
         font-size: 0.6em;
         margin-bottom: -2em; 
-    }
-
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr); /* Two columns per row */
-        gap: 0.8em; /* Adjusted gap between items */
-    
     }
 
     .grid-item {
@@ -820,6 +992,7 @@ button.submit-button {
   
 }
 @media (max-width: 480px){
+
     .radio input[type="radio"] {
         width: 16px;
         height: 16px;
@@ -831,14 +1004,14 @@ button.submit-button {
         height: 7px;
     
     }
-}
-@media (max-width: 440px){
-    .subset {
-        font-size: 0.4em;
-        padding-left: 0em;
-        display: block;
+    .grid div span {
+        font-size: 0.6rem;
+    }
+    .grid div span + p {
+        font-size: 0.5rem; /* Adjust font size */
     }
 }
+
 
 
 

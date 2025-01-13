@@ -18,10 +18,17 @@ header {
 }
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: left;
+    display: flex;               /* Ensures the image aligns correctly */
+    align-items: center;         /* Vertically centers the image */
+    justify-content: flex-start; /* Aligns the image to the left */
 }
+
+.logo img {
+    width: 5em;    /* Use 'em' to set width relative to font size */
+    max-width: 4.5em; /* Maximum size for larger screens */
+    height: auto;   /* Maintain the aspect ratio */
+}
+
 
 .nav-links {
     display: flex;
@@ -436,7 +443,7 @@ button.submit-button {
 
     /* Service Section */
     .Service {
-        padding-top: 0.5em;
+        padding-top: 0.2em;
     }
 
     .Service h1 {
@@ -444,10 +451,10 @@ button.submit-button {
     }
 
     .subset {
-        font-size: 0.4em;
-        padding-left: 3em;
+        font-size: 0.5em;
+        padding-left: 2.5em;
     }
-
+    
     /* Cards section */
     .card-grid {
         padding-top: 10px;
@@ -641,6 +648,17 @@ button.submit-button {
         margin-left: 1em;
     }
 }
+@media(max-width: 650px){
+    .subset {
+        font-size: 0.5em;
+        padding-top: 0.4em;
+        padding-left: 0em; /* Adjusted padding */
+    }
+    .subset {
+        display: block; /* Moves the text to the next line */
+        width: 100%; /* Optional: ensures it takes full width */
+    }
+}
 @media(max-width: 580px) {
     body { 
         margin: 0.8em 2.7em; /* 25px 55px */
@@ -663,7 +681,7 @@ button.submit-button {
     }
     
     .intro .text h1 {
-        font-size: 1em; 
+        font-size: 1.3em; 
     }
 
     .intro .text p {
@@ -920,6 +938,13 @@ button.submit-button {
         padding-left: 0em;
         display: block;
     }
+}
+@media (max-width: 400px){
+    .logo img {
+        width: 4em;    /* Use 'em' to set width relative to font size */
+        max-width: 3.5em; /* Maximum size for larger screens */
+        height: auto;   /* Maintain the aspect ratio */
+    }   
 }
 
 
