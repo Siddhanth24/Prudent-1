@@ -28,7 +28,7 @@ app.post("/api/subscribe", async (req, res) => {
   try {
     // Insert subscription details into the database
     const sql = `
-      INSERT INTO your_table_name (name, email, message, option_selected)
+      INSERT INTO contacts (name, email, message, option_selected)
       VALUES (?, ?, ?, ?)
     `;
     const values = [
