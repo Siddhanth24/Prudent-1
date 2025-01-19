@@ -2,7 +2,7 @@ body {
     background-color: black;
     font-family: Space Grotesk regular;
     color: white; 
-    margin:25px 55px;    
+    margin: 1.5625rem 3.4375rem;    
 }
 
 header {
@@ -24,17 +24,17 @@ header {
 }
 
 .logo img {
-    width: 5em;    /* Use 'em' to set width relative to font size */
-    max-width: 4.5em; /* Maximum size for larger screens */
-    height: auto;   /* Maintain the aspect ratio */
+    width: 7em; 
+    max-width: 6.5em;
+    height: auto;
 }
 
 .nav-links {
     display: flex;
     justify-content: center; 
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: normal;
-    gap: 40px; 
+    gap: 2.5rem; 
     flex-grow: 1; 
 }
 
@@ -48,13 +48,13 @@ header {
 }
 
 .contact-us-button {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     background-color: transparent; 
-    padding: 15px 30px; 
+    padding: 0.6375rem 1.575rem; /* 15px 30px */
     color: white; 
     text-decoration: none;
-    border-radius: 14px;
-    border: 1px solid white; 
+    border-radius: 0.875rem; /* 14px */
+    border: 0.0625rem solid white; /* 1px */
     transition: background-color 0.3s, color 0.3s; 
 }
 
@@ -68,24 +68,23 @@ html {
 }
 
 .intro {   
-    margin: 30px 0;  
+    margin: 1.875rem 0;  
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .intro .text {
-    max-width: 550px;
+    max-width: 34.375rem;
 }
 
 .intro .text h1 {
-    font-size: 60px;
+    font-size: 3.75rem;
 }
 
 .intro .text p {
     font-weight: normal;
-    text-align: justify;
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .intro-blue-text {
@@ -94,12 +93,12 @@ html {
 
 .intro button {
     background-color: #2A7EF8;
-    font-size: 20px;
+    font-size: 1.25rem;
     color: white;
     border: none;
-    padding: 20px 35px;
+    padding: 1.25rem 2.1875rem;
     cursor: pointer;
-    border-radius: 14px;
+    border-radius: 0.875rem;
 }
 
 .intro button:hover {
@@ -107,20 +106,20 @@ html {
 }
 
 .intro .image {
-    margin-left: 30px;
+    margin-left: 1.875rem;
 }
 
 .intro .image img {
     width: 100%; 
-    max-width: 500px; 
+    max-width: 31.25rem; 
 }
 
 .second-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 90px;
-    margin-bottom: 150px;
+    margin-top: 5.625rem;
+    margin-bottom: 9.375rem;
 }
 
 .box-wrapper {
@@ -129,18 +128,18 @@ html {
 }
 
 .box {
-    padding: 40px;
+    padding: 2.5rem;
     text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 1.25rem;
+    box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3);
 }
 
 /* Left blue box */
 .box.blue {
     background-color: #346df1;
     color: white;
-    width: 280px;
-    height: 290px;
+    width: 17.5rem;
+    height: 18.125rem;
     z-index: 1;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
@@ -149,12 +148,12 @@ html {
 /* Middle white box */
 .box.white {
     background-color: white;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.6);
     color: black;
-    width: 350px;
-    height: 320px;
+    width: 21.875rem;
+    height: 20rem;
     z-index: 2;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     position: relative;
 }
 
@@ -162,38 +161,37 @@ html {
 .box.black {
     background-color: #2a2a34;
     color: white;
-    width: 280px;
-    height: 290px;
+    width: 17.5rem;
+    height: 18.125rem;
     z-index: 1;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
 
 .second-container h2 {
-    padding-top: 20px;
-    font-size: 31.56px;
+    padding-top: 1.25rem;
+    font-size: 1.975rem;
 }
 
 .second-container p {
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .aboutus {
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 .info-box {
     display: flex;
-    border: 3px solid #2A7EF8;  
-    border-radius: 45px;  
+    border: 0.1875rem solid #2A7EF8;  
+    border-radius: 2.8125rem;  
     overflow: hidden;  
-    margin: 20px auto;  
-    padding: 60px 70px;
-    text-align: justify;    
+    margin: 1.25rem auto;  
+    padding: 3.75rem 4.375rem;
 }
 
 .info-image {
     flex: 0 0 45%;  /* Image takes 40% of the box width */
-    padding-right: 20px;  /* Space between image and text */
+    padding-right: 1.25rem;  /* Space between image and text */
 }
 .info-image img {
     width: 100%;  /* Make the image responsive */
@@ -203,102 +201,245 @@ html {
     flex: 1;  /* Text takes the remaining space */
 }
 .info-text h1 {
-    font-size: 31.69px;
+    font-size: 1.975rem;
 }
 .info-text p {
-    font-size: 18px;  /* Paragraph font size */
+    font-size: 1.125rem;  /* Paragraph font size */
     color: white;  /* Text color */
 }
 
 .subset {
-    font-size: 18px;
-    padding-left: 50px;
-}
-.contact-section {
-    padding-top: 40px;
-}
-.contact-section h1{
-    font-size: 40px;
+    font-size: 1.125rem;
+    padding-left: 3.125rem;
 }
 
+.contact-section {
+    padding-top: 2.5rem;
+}
+
+.contact-section h1 {
+    font-size: 2.5rem;
+}
+
+/* Contact Form Container */
 .contact-form-container {
-    background-color: #000000; 
-    padding: 10px 40px; 
-    border-radius: 45px; 
-    border: 2px solid #FFFFFF; 
-    display: flex; 
-    justify-content: space-between; 
+    background-color: #000000;
+    padding: 0.625rem 2.5rem;
+    border-radius: 2.8125rem;
+    border: 0.125rem solid #FFFFFF;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 1.25rem;
 }
 
 .contact-form {
     width: 50%;
 }
 
+/* Radio Button Styles */
 .radio-container {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .radio {
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 1.875rem;
 }
 
 .radio input[type="radio"] {
     appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ffffff;  /* White border for unselected */
-    border-radius: 50%;
+    width: 1.25rem; /* Ensure width is constant */
+    height: 1.25rem; /* Ensure height is constant */
+    border: 0.125rem solid #ffffff; /* White border */
+    border-radius: 50%; /* Maintain circular shape */
     position: relative;
     cursor: pointer;
     outline: none;
-    margin-right: 10px;
+    margin-right: 0.625rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Keep the radio button checked state circular */
 .radio input[type="radio"]:checked {
     background-color: transparent;
-    border: 2px solid #ffffff; /* Border remains white when selected */
+    border: 0.125rem solid #ffffff;
 }
 
 .radio input[type="radio"]:checked::before {
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
-    background-color: #0057ff; /* Blue inner circle */
-    border-radius: 50%;
+    width: 0.625rem; /* Inner circle size */
+    height: 0.625rem; /* Inner circle size */
+    background-color: #0057ff; /* Blue color */
+    border-radius: 50%; /* Keep inner circle circular */
     position: absolute;
 }
 
+
 .radio-label {
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
+/* Form Input Styles */
 label {
     display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-} 
+    margin-bottom: 0.3125rem;
+    font-size: 1rem;
+}
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    padding: 0.625rem;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.5rem;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+    font-family: inherit;
 }
+
+/* Submit Button */
+button.submit-button {
+    width: 100%;
+    padding: 0.625rem;
+    font-size: 1.25rem;
+    background-color: #4460f1;
+    border: none;
+    border-radius: 0.625rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 2.5rem;
+    background-color: #2A7EF8;
+    border-radius: 2.8125rem;
+    padding: 2.5rem 3.75rem;
+    color: #fff;
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1.25rem;
+    margin-bottom: 0.625rem;
+}
+
+.footer-section h3 {
+    font-size: 1.25rem;
+}
+
+.footer-section p {
+    font-size: 1.125rem;
+}
+
+/* Footer Links */
+.links {
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.9375rem;
+    flex: 1;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Social Icons */
+.social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.9375rem;
+}
+
+.social a img {
+    width: 1.5rem;
+}
+
+/* Footer Input and Buttons */
+.footer-section .right {
+    padding-right: 8.125rem;
+}
+
+.footer-section input[type="email"] {
+    width: 17.8125rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid white;
+    background-color: #2A7EF8;
+    color: white;
+}
+
+.footer-section input[type="email"]::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.footer-section button {
+    border: none;
+    background-color: #2A7EF8;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    margin-left: 0.625rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.footer-section button:hover {
+    background-color: black;
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 0.0625rem solid #A7A9BE;
+    padding-top: 0.625rem;
+    margin-top: 0.625rem;
+}
+
+.right button {
+    font-size: 1.25rem;
+}
+
+.radio {
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .radio input[type="radio"] {
+        width: 1rem;  /* 16px */
+        height: 1rem; /* 16px */
+    }
+
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 0.625rem; /* 10px */
+        height: 0.625rem; /* 10px */
+    }
+
 
 button.submit-button {
     width: 100%;
@@ -412,86 +553,152 @@ button.submit-button {
 .right button{
     font-size: 20px;
 }
-@media (max-width: 780px) {
+@media screen and (max-width: 980px) {
+    .radio input[type="radio"] {
+        width: 1.25rem; /* Enforce constant size */
+        height: 1.25rem; /* Enforce constant size */
+    }
+
+    .radio input[type="radio"]:checked::before {
+        width: 0.625rem; /* Inner circle remains consistent */
+        height: 0.625rem; /* Inner circle remains consistent */
+    }
+    .form-image img {
+        width: 18.5rem;
+    }
+}
+@media (max-width: 871px) {
     body { 
         margin: 1em 3em; /* Adjusted for better spacing */
         box-sizing: border-box;
     }
 
     .logo {
-        font-size: 1em; /* Increased logo size */
+        font-size: 1.1em; /* Increased logo size */
     }
     .nav-links {
         font-size: 1em; /* Increased nav link font size */
         gap: 0.5em; 
     }
     .contact-us-button {
-        font-size: 1em; 
-        padding: 0.8em 1em; 
+        font-size: 0.8em; 
+        padding: 0.6em 0.8em; 
     }
+
     .intro .text h1 {
         font-size: 1.8em; /* Slightly bigger heading */
+        max-width: 15em;
     }
     .intro .text p {
         font-size: 1em; /* Increased paragraph font size */
     }
-    .second-container h2 {
-        font-size: 1em; /* Smaller subheading */
-    }
-    .second-container p {
-        font-size: 0.8em; /* Smaller paragraph text */
-    }
-    .info-box .info-text h1 {
-        font-size: 0.9em; /* Reduced subheading size */
-    }
-    .info-box .info-text p {
-        font-size: 0.75em; /* Smaller paragraph text */
-    }
-    .Service h1 {
-        font-size: 1.4em; /* Reduced service heading size */
-    }
-    .subset {
-        font-size: 0.5em; /* Smaller subset text */
-        padding-left: 2.6em; /* Reduced padding */
+
+    .intro .text p {
+        font-weight: normal;
+        font-size: 0.8em; /* Increased font size */
     }
 
+    .intro button {
+        background-color: #2A7EF8;
+        font-size: 0.8em;
+        padding: 1em 1.5em;
+    }
+
+    .intro .image {
+        margin-left: 2em; /* Reduced margin */
+    }
+
+    .intro .image img {
+        width: auto;
+        max-width: 200px; /* Adjusted max width */
+        height: auto;
+        max-height: 130px; /* Adjusted height */
+    }
     .second-container {
-        margin-top: 1em; /* Adjusted margins for smaller screens */
-        margin-bottom: 3em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5.625rem;
+        margin-bottom: 6.375rem;
     }
-
+    
+    .box-wrapper {
+        display: flex;
+        position: relative;
+    }
+    
     .box {
-        width: 200px; /* Smaller box width */
-        height: 200px; /* Smaller box height */
-        padding: 1em; /* Reduced padding */
+        padding: 2.5rem;
+        text-align: center;
+        border-radius: 1.25rem;
+        box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.3);
     }
-
-    .box.blue, .box.black {
-        width: 180px;
-        height: 180px;
+    
+    /* Left blue box */
+    .box.blue {
+        background-color: #346df1;
+        color: white;
+        width: 17.5rem;
+        height: 16.125rem;
+        z-index: 1;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
     }
-
+    
+    /* Middle white box */
     .box.white {
-        width: 220px;
-        height: 220px;
+        background-color: white;
+        box-shadow: 0 1.25rem 3.125rem rgba(0, 0, 0, 0.6);
+        color: black;
+        width: 21.875rem;
+        height: 18rem;
+        z-index: 2;
+        border-radius: 1.25rem;
+        position: relative;
     }
-
+    
+    /* Right black box */
+    .box.black {
+        background-color: #2a2a34;
+        color: white;
+        width: 17.5rem;
+        height: 16.125rem;
+        z-index: 1;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .second-container h2 {
+        padding-top: 1rem;
+        font-size: 1.5rem;
+    }
+    
+    .second-container p {
+        font-size: 1rem;
+    }
+    .aboutus {
+        margin-top: 0.8rem;
+    }
     .info-box {
-        padding: 0.75em 1em; /* Reduced padding */
+        display: flex;
+        border: 0.1875rem solid #2A7EF8;  
+        border-radius: 2.8125rem;  
+        overflow: hidden;  
+        margin: 1.25rem auto;  
+        padding: 3.75rem 4.375rem;
     }
-
-    .info-image {
-        padding-right: 10px; /* Reduced padding */
-    }
-
-    .info-image img {
-        max-width: 90%; /* Slightly smaller image */
-        max-height: 90%;
-    }
-
+    
     .info-text {
-        flex: 1;
+        flex: 1;  /* Text takes the remaining space */
     }
+    .info-text h1 {
+        font-size: 1.975rem;
+    }
+    .info-text p {
+        font-size: 0.9rem;  /* Paragraph font size */
+        color: white;  /* Text color */
+    }
+    
     .contact-form-container {
         padding: 25px;
     }
@@ -528,8 +735,8 @@ button.submit-button {
     .radio input[type="radio"]:checked::before {
         content: "";
         display: block;
-        width: 7px;
-        height: 9px;
+        width: 0.563rem;
+        height: 0.563rem;
         background-color: #0057ff;
         border-radius: 50%;
         position: absolute;
@@ -552,7 +759,7 @@ button.submit-button {
     }
 
     .form-image img {
-        width: 10em;  
+        width: 15em;  
         height: 100%; 
         object-fit: contain; 
     }
@@ -625,7 +832,6 @@ button.submit-button {
     .footer-section .right {
         padding-right: 12px;
     }
-
     .footer-section input[type="email"] {
         width: 7em; 
         font-size: 1em;
@@ -669,23 +875,110 @@ button.submit-button {
         margin-left: 1em;
     }
 }
-@media (max-width: 650px){
+@media (max-width: 780px) {
+    .logo {
+        font-size: 0.8em;
+    }
+    .nav-links {
+        font-size: 0.7m;
+        gap: 0.4em; 
+    }
+    .contact-us-button {
+        font-size: 0.6em; 
+        padding: 0.6em 0.7em; 
+    }
+    .intro .text h1 {
+        font-size: 1.8em; /* Slightly bigger heading */
+    }
+    .intro .text p {
+        font-size: 1em; /* Increased paragraph font size */
+    }
+    .second-container h2 {
+        font-size: 1em; /* Smaller subheading */
+    }
+    .second-container p {
+        font-size: 0.8em; /* Smaller paragraph text */
+    }
+    .info-box .info-text h1 {
+        font-size: 0.9em; /* Reduced subheading size */
+    }
+    .info-box .info-text p {
+        font-size: 0.75em; /* Smaller paragraph text */
+    }
+    .Service h1 {
+        font-size: 1.4em; /* Reduced service heading size */
+    }
+    .subset {
+        font-size: 0.5em; /* Smaller subset text */
+        padding-left: 2.6em; /* Reduced padding */
+    }
 
+    .second-container {
+        margin-top: 1em; /* Adjusted margins for smaller screens */
+        margin-bottom: 3em;
+    }
+
+    .box {
+        width: 200px; /* Smaller box width */
+        height: 200px; /* Smaller box height */
+        padding: 1em; /* Reduced padding */
+    }
+
+    .box.blue, .box.black {
+        width: 180px;
+        height: 180px;
+    }
+
+    .box.white {
+        width: 220px;
+        height: 220px;
+    }
+
+    .info-box {
+        padding: 0.75em 1em; /* Reduced padding */
+    }
+
+    .info-image {
+        padding-right: 10px; /* Reduced padding */
+    }
+
+    .info-image img {
+        max-width: 90%; /* Slightly smaller image */
+        max-height: 90%;
+    }
+
+    .info-text {
+        flex: 1;
+    }
+}
+@media(max-width:640px){
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 0.463rem;
+        height: 0.563rem;
+        background-color: #0057ff;
+        border-radius: 50%;
+        position: absolute;
+    }
+    
 }
 @media (max-width: 580px)  {
     body { 
         margin: 0.8em 2.7em; /* 25px 55px */
         box-sizing: border-box; /* Ensures padding and margins don't add extra width */
     }
+  
+
+    .logo {
+        font-size: 0.7em;
+    }
     .nav-links {
         font-size: 0.6em;
         gap: 0.4em; 
     }
-    .logo {
-        font-size: 0.7em;
-    }
     .contact-us-button {
-        font-size: 0.6em; 
+        font-size: 0.5em; 
         padding: 0.6em 0.7em; 
     }
     .intro .text h1{
@@ -706,16 +999,19 @@ button.submit-button {
     .info-box .info-text .p{
         font-size: 0.6em;
     }
+    .subset {
+        font-size: 0.4em;
+        padding-left: 0em;
+        display: block;
+    }
+
     .Service{
         padding-top: 0.2em;
     }
     .Service h1 {
         font-size: 1.5em;
     }
-    .subset {
-        font-size: 0.5em;
-        padding-left: 2.5em;
-    }
+
 
     .second-container {
         margin-top: 1.5em;
@@ -784,69 +1080,22 @@ button.submit-button {
         word-wrap: break-word; /* Prevent overflow */
         line-height: 1.2em; /* Improve readability */
     }
-    .contact-form-container{
-        padding:30px;
-    }
-    .contact-section h1{
-        font-size: 1.5em;
-    } 
-    
-    .contact-section {
-        padding-top: 1.4em;
-    }
-
-    .radio-label {
-        font-size: 0.8em;
+    .radio {
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap; /* Prevent text from wrapping */
     }
 
     .radio input[type="radio"] {
-        width: 15px;
-        height: 15px;
+        width: 1rem;  /* 16px */
+        height: 1rem; /* 16px */
     }
 
-    label {
-        margin-bottom: 5px;
-        font-size: 0.8em;
-    } 
-
-    input[type="text"], input[type="email"], textarea {
-        width: 60%;
-        height: 40%;
-        padding: 5px;
-        font-size: 0.7em;
-        margin-bottom: 1em;
-        border-radius: 8px;
-    }
     .radio input[type="radio"]:checked::before {
         content: "";
         display: block;
-        width: 5px;
-        height: 7px;
-        background-color: #0057ff; /* Blue inner circle */
-        border-radius: 50%;
-        position: absolute;
-    }
-
-    textarea {
-        padding: 5px; /* Adjust padding to reduce height */
-        font-size: 0.7em; /* Smaller font size */
-        height: 6em; /* Set a specific height to control the size */
-        margin-bottom: 15px; /* Adjust margin if needed */
-        border-radius: 8px;
-        background-color: #ffffff;
-        color: rgb(0, 0, 0);
-    }
-
-    button.submit-button {
-        width: 80%;
-        padding: 7px;
-        font-size: 0.6em;
-    }
-
-    .form-image img {
-            width: 8.5em;  
-            height: 100%; 
-            object-fit: contain; 
+        width: 0.625rem; /* 10px */
+        height: 0.625rem; /* 10px */
     }
     .footer-section h3
     {
@@ -960,20 +1209,78 @@ button.submit-button {
         margin-left: 0em;
     }
 }   
-    @media (max-width: 480px){
-        .radio input[type="radio"] {
-            width: 16px;
-            height: 16px;
-        }
-        .radio input[type="radio"]:checked::before {
-            content: "";
-            display: block;
-            width: 5px;
-            height: 7px;
-        
-        }
+@media (max-width: 520px){
+    .info-image {
+        padding-top: 1em;
     }
-    @media (max-width: 440px){
+    .subset {
+        font-size: 0.4em;
+        padding-left: 0em;
+        display: block;
+    }
+    
+    .radio input[type="radio"] {
+        width: 1.125rem; /* Adjust size for smaller screens */
+        height: 1.125rem; /* Keep it a perfect circle */
+        max-width: 1.125rem;
+        max-height: 1.125rem;
+    }
+    input[type="text"], input[type="email"], textarea {
+        width: 100%; /* Set all fields to 100% width */
+        max-width: 80%; /* Prevent them from becoming too wide */
+        padding: 0.425rem;
+        font-size: 0.6rem;
+        margin-bottom: 1.25rem;
+        border-radius: 0.6rem;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-family: inherit;
+    }
+    
+    /* Specific styles for the message textarea to limit its size */
+    textarea {
+        max-width: 80%; /* Ensures that message is not too wide */
+        height: 4em; /* You can adjust this as needed */
+    }
+    .form-image img {
+        width: 8em; /* Reduce the width on smaller screens */
+    }
+    
+    /* Submit Button */
+    }
+@media (max-width: 480px){
+    .radio-label {
+        color: white;
+        font-size: 0.8rem;
+    }
+    .radio {
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .radio input[type="radio"] {
+        width: 1rem;  /* 16px */
+        height: 1rem; /* 16px */
+    }
+
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 0.625rem; /* 10px */
+        height: 0.625rem; /* 10px */
+    }
+    textarea {
+        padding: 5px; /* Adjust padding to reduce height */
+        font-size: 0.7em; /* Smaller font size */
+        height: 4em; /* Set a specific height to control the size */
+        margin-bottom: 15px; /* Adjust margin if needed */
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+    }
+}
+@media (max-width: 440px){
         .subset {
             padding-left: 0em;
             display: block;
@@ -1010,19 +1317,26 @@ button.submit-button {
             border-top-left-radius: 0;
             border-bottom-left-radius: 0;
         }
-        
+
     }
-    @media (max-width: 410px){
+@media (max-width: 410px){
         .intro .text h1 {
             font-size: 1.1em; 
         }
         
     }
-    @media (max-width: 400px){
-        .logo img {
-            width: 4em;    /* Use 'em' to set width relative to font size */
-            max-width: 3.5em; /* Maximum size for larger screens */
-            height: auto;   /* Maintain the aspect ratio */
-        }   
+@media (max-width: 400px){
+        .logo {
+            font-size: 0.6em;
+        }
+        .nav-links {
+            font-size: 0.5em;
+            gap: 0.3em; 
+        }
+        .contact-us-button {
+            font-size: 0.5em; 
+            padding: 0.6em 0.7em; 
+        }
+     
     }
     

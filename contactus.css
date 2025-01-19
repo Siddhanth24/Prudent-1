@@ -1,340 +1,277 @@
 body {
-    background-color:black; 
-    font-family: 'Space Grotesk';
-    color: white; 
-    margin: 25px 55px;
+    background-color: black; /* Sets the background color to black */
+    font-family: 'Space Grotesk'; /* Specifies the font style */
+    color: white; /* Text color set to white */
+    margin: 1.5625rem 3.4375rem; /* Converted from px to rem */
 }
 
 header {
-    color: white;
+    color: white; /* Sets header text color to white */
+}
+html {
+    scroll-behavior: smooth;
 }
 
 .nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0; 
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Aligns items vertically to the center */
+    justify-content: space-between; /* Distributes items evenly with space between */
+    margin: 0; /* Removes margin */
+    padding: 0; /* Removes padding */
 }
 
 .logo {
-    display: flex;               /* Ensures the image aligns correctly */
-    align-items: center;         /* Vertically centers the image */
-    justify-content: flex-start; /* Aligns the image to the left */
+    display: flex; /* Ensures the logo aligns properly */
+    align-items: center; /* Vertically centers the logo */
+    justify-content: flex-start; /* Aligns logo to the left */
 }
 
 .logo img {
-    width: 5em;    /* Use 'em' to set width relative to font size */
-    max-width: 4.5em; /* Maximum size for larger screens */
-    height: auto;   /* Maintain the aspect ratio */
+    width: 7em; 
+    max-width: 6.5em;
+    height: auto;
 }
 
+
 .nav-links {
-    display: flex;
-    justify-content: center; 
-    font-size: 20px;
-    font-weight: normal;
-    gap: 40px; 
-    flex-grow: 1; 
+    display: flex; /* Uses flexbox for navigation links */
+    justify-content: center; /* Centers the navigation links */
+    font-size: 1.25rem; /* Converted from px to rem */
+    font-weight: normal; /* Ensures normal weight */
+    gap: 2.5rem; /* Converted from px to rem */
+    flex-grow: 1; /* Allows nav links to take up available space */
 }
 
 .nav-links li {
-    list-style: none;
+    list-style: none; /* Removes bullet points from the list */
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: white;
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets link color to white */
 }
 
 .contact-us-button {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
     background-color: transparent; 
-    padding: 15px 30px; 
+    padding: 0.6375rem 1.575rem; /* 15px 30px */
     color: white; 
     text-decoration: none;
-    border-radius: 14px;
-    border: 1px solid white; 
+    border-radius: 0.875rem; /* 14px */
+    border: 0.0625rem solid white; /* 1px */
     transition: background-color 0.3s, color 0.3s; 
 }
 
 .contact-us-button:hover {
-    background-color: white; 
-    color: black; 
+    background-color: white; /* Button turns white on hover */
+    color: black; /* Text color changes to black on hover */
 }
 
 /* Intro section layout */
 .intro {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Uses flexbox to align content */
+    justify-content: space-between; /* Ensures content is spaced out */
     align-items: flex-start; /* Aligns items to the top */
-    margin: 30px 0;  
+    margin: 1.875rem 0; /* Converted from px to rem */
 }
 
 /* Text section */
 .intro .text {
-    max-width: 600px;
+    max-width: 37.5rem; /* Converted from px to rem */
 }
 
 .intro .text h1 {
-    font-size: 60px;
-    line-height: 1.2;
+    font-size: 3.75rem; /* Converted from px to rem */
+    line-height: 1.2; /* Adjusts line spacing */
 }
 
 .intro .text p {
-    font-size: 1.25em;
-    font-weight: normal;
-    margin-bottom: 1.25em; /* Space between the paragraph and the grid */
+    font-size: 1.25rem; /* Converted from px to rem */
+    font-weight: normal; /* Ensures normal font weight */
+    margin-bottom: 1.25rem; /* Converted from px to rem */
 }
 
 .intro-blue-text {
-    color: #2A7EF8; /* Matches the blue from the image */
+    color: #2A7EF8; /* Sets color to a blue shade */
 }
 
 /* Grid container for contact information */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 items per row by default */
-    gap: 15px;
-    max-width: 700px;
+    display: grid; /* Uses grid layout for contact details */
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 columns */
+    gap: 0.9375rem; /* Converted from px to rem */
+    max-width: 43.75rem; /* Converted from px to rem */
 }
 
 .grid .full-width {
-    grid-column: span 2; /* Makes the Address span across two columns */
+    grid-column: span 2; /* Makes the Address span across both columns */
 }
 
 .grid div {
-    background-color: black;
-    padding: 15px;
-    border-radius: 20px;
-    border: 1px solid #2A7EF8;
+    background-color: black; /* Sets background color for grid items */
+    padding: 0.9375rem; /* Converted from px to rem */
+    border-radius: 1.25rem; /* Converted from px to rem */
+    border: 0.0625rem solid #2A7EF8; /* Converted from px to rem */
 }
 
 .grid div span {
-    display: block;
-    font-size: 1.35rem;
-    color: #2A7EF8;
-    margin-bottom: 5px;
+    display: block; /* Makes span behave like a block element */
+    font-size: 1.35rem; /* Converted from px to rem */
+    color: #2A7EF8; /* Sets the text color to blue */
+    margin-bottom: 0.3125rem; /* Converted from px to rem */
 }
+
 .grid div p {
-    font-size: 1.25rem; /* Keep the paragraph text size consistent */
+    font-size: 1.25rem; /* Converted from px to rem */
 }
 
 /* Main container layout */
 .main-container {
-    display: flex; /* Ensure left and right sides align next to each other */
+    display: flex; /* Uses flexbox layout */
 }
 
 .right-side {
-    flex: 0 0 300px; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    padding-left: 20px; 
-    margin: 0 auto;
+    flex: 0 0 18.75rem; /* Converted from px to rem */
+    display: flex; /* Uses flexbox inside the right-side */
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    padding-left: 1.25rem; /* Converted from px to rem */
+    margin: 0 auto; /* Centers the right-side container */
 }
 
 .right-side img {
-    max-width: 100%; /* Keeps the image responsive */
-    height: auto; /* Maintain aspect ratio */
-    transform: none;
-}
-/* Main container */
-.main-container {
-    display: flex; /* Ensure left and right sides align next to each other */
+    max-width: 100%; /* Ensures image is responsive */
+    height: auto; /* Maintains aspect ratio */
+    transform: none; /* Removes any transformations */
 }
 
+/* Subset font styling */
 .subset {
-    font-size: 18px;
-    padding-left: 50px;
+    font-size: 1.125rem; /* Converted from px to rem */
+    padding-left: 3.125rem; /* Converted from px to rem */
 }
+
 
 .contact-section {
-    padding-top: 40px;
-}
-.contact-section h1{
-    font-size: 40px;
+    padding-top: 2.5rem;
 }
 
+.contact-section h1 {
+    font-size: 2.5rem;
+}
+
+/* Contact Form Container */
 .contact-form-container {
-    background-color: #000000; 
-    padding: 10px 40px; 
-    border-radius: 45px; 
-    border: 2px solid #FFFFFF; 
-    display: flex; 
-    justify-content: space-between; 
+    background-color: #000000;
+    padding: 0.625rem 2.5rem;
+    border-radius: 2.8125rem;
+    border: 0.125rem solid #FFFFFF;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 20px; 
+    margin-top: 1.25rem;
 }
 
 .contact-form {
     width: 50%;
 }
 
+/* Radio Button Styles */
 .radio-container {
     display: flex;
     justify-content: left;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .radio {
     display: flex;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 1.875rem;
 }
 
 .radio input[type="radio"] {
     appearance: none;
-    width: 20px;
-    height: 20px;
-    border: 2px solid #ffffff;  /* White border for unselected */
-    border-radius: 50%;
+    width: 1.25rem; /* Ensure width is constant */
+    height: 1.25rem; /* Ensure height is constant */
+    border: 0.125rem solid #ffffff; /* White border */
+    border-radius: 50%; /* Maintain circular shape */
     position: relative;
     cursor: pointer;
     outline: none;
-    margin-right: 10px;
+    margin-right: 0.625rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/* Keep the radio button checked state circular */
 .radio input[type="radio"]:checked {
     background-color: transparent;
-    border: 2px solid #ffffff; /* Border remains white when selected */
+    border: 0.125rem solid #ffffff;
 }
 
 .radio input[type="radio"]:checked::before {
     content: "";
     display: block;
-    width: 10px;
-    height: 10px;
-    background-color: #0057ff; /* Blue inner circle */
-    border-radius: 50%;
+    width: 0.625rem; /* Inner circle size */
+    height: 0.625rem; /* Inner circle size */
+    background-color: #0057ff; /* Blue color */
+    border-radius: 50%; /* Keep inner circle circular */
     position: absolute;
 }
 
+
 .radio-label {
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-
+/* Form Input Styles */
 label {
     display: block;
-    margin-bottom: 5px;
-    font-size: 16px;
-} 
+    margin-bottom: 0.3125rem;
+    font-size: 1rem;
+}
 
 input[type="text"], input[type="email"], textarea {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-    border-radius: 8px;
+    padding: 0.625rem;
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0.5rem;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
+    font-family: inherit;
 }
 
+/* Submit Button */
 button.submit-button {
     width: 100%;
-    padding: 10px;
-    font-size: 20px;
+    padding: 0.625rem;
+    font-size: 1.25rem;
     background-color: #4460f1;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     color: white;
     cursor: pointer;
 }
+
+/* Footer Section */
 .footer {
-    margin-top: 40px;
+    margin-top: 2.5rem;
     background-color: #2A7EF8;
-    border-radius: 45px;
-    padding: 40px 60px;
+    border-radius: 2.8125rem;
+    padding: 2.5rem 3.75rem;
     color: #fff;
 }
 
+/* Footer Content */
 .footer-content {
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between links and logos */
-    align-items: center; /* Align items vertically */
-    width: 100%; /* Full width */
-}
-
-.footer-section {
-    display: flex; /* Use flexbox for footer sections */
-    align-items: center; /* Align items vertically within sections */
-    justify-content: space-between; /* Space out child elements */
-    width: 100%; /* Full width */
-}
-.footer-section h3
-{
-    font-size: 20px;
-}
-.footer-section p{
-    font-size: 18px;
-}
-
-.links {
-    font-size: 18px;
-    display: flex; /* Use flexbox for links */
-    justify-content: center; /* Center the links */
-    gap: 15px; /* Space between links */
-    flex: 1; /* Allow it to grow to fill available space */
-}
-
-.links a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline from links */
-}
-
-/* Align social icons to the right */
-.social {
-    display: flex; /* Use flexbox for social icons */
-    justify-content: flex-end; /* Align social icons to the right */
-    gap: 15px; /* Space between social icons */
-}
-
-.social a img {
-    width: 24px; /* Set the size of the social icons */
-}
-.footer-section .right{
-    padding-right: 130px ;
-}
-
-.footer-section input[type="email"] {
-    width: 285px; /* Set width to 285 pixels */
-    padding: 10px; /* Padding for better spacing */
-    border-radius: 10px; /* Rounded corners */
-    border: 1px solid white; /* Thin white border */
-    background-color: #2A7EF8; /* Blue background */
-    color: white; /* Text color */
-}
-
-/* Style the placeholder text */
-.footer-section input[type="email"]::placeholder {
-    color: white; /* White placeholder text */
-    opacity: 0.8; /* Slightly transparent */
-}
-
-.footer-section button {
-    border: none;
-    background-color: #2A7EF8;
-    color: white;
-    padding: 10px 20px;
-    margin-left: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.footer-section button:hover {
-    background-color: black;
-    color: white; /* Keep text color white */
-}
-.footer-bottom {
-    text-align: center;
-    border-top: 1px solid #A7A9BE; /* Border at the top */
-    padding-top: 10px; /* Space above the border */
-    margin-top: 10px; /* Space between form and border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .footer-section {
@@ -342,13 +279,141 @@ button.submit-button {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 20px; /* Padding inside the footer section */
-    margin-bottom: 10px; /* Space between the form and footer-bottom */
+    padding: 1.25rem;
+    margin-bottom: 0.625rem;
 }
-.right button{
-    font-size: 20px;
+
+.footer-section h3 {
+    font-size: 1.25rem;
+}
+
+.footer-section p {
+    font-size: 1.125rem;
+}
+
+/* Footer Links */
+.links {
+    font-size: 1.125rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.9375rem;
+    flex: 1;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Social Icons */
+.social {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.9375rem;
+}
+
+.social a img {
+    width: 1.5rem;
+}
+
+/* Footer Input and Buttons */
+.footer-section .right {
+    padding-right: 8.125rem;
+}
+
+.footer-section input[type="email"] {
+    width: 17.8125rem;
+    padding: 0.625rem;
+    border-radius: 0.625rem;
+    border: 0.0625rem solid white;
+    background-color: #2A7EF8;
+    color: white;
+}
+
+.footer-section input[type="email"]::placeholder {
+    color: white;
+    opacity: 0.8;
+}
+
+.footer-section button {
+    border: none;
+    background-color: #2A7EF8;
+    color: white;
+    padding: 0.625rem 1.25rem;
+    margin-left: 0.625rem;
+    border-radius: 0.625rem;
+    cursor: pointer;
+}
+
+.footer-section button:hover {
+    background-color: black;
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 0.0625rem solid #A7A9BE;
+    padding-top: 0.625rem;
+    margin-top: 0.625rem;
+}
+
+.right button {
+    font-size: 1.25rem;
+}
+
+.radio {
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap; /* Prevent text from wrapping */
+    }
+
+    .radio input[type="radio"] {
+        width: 1rem;  /* 16px */
+        height: 1rem; /* 16px */
+    }
+
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 0.625rem; /* 10px */
+        height: 0.625rem; /* 10px */
+    }
+
+@media screen and (max-width: 980px) {
+    .radio input[type="radio"] {
+        width: 1.25rem; /* Enforce constant size */
+        height: 1.25rem; /* Enforce constant size */
+    }
+
+    .radio input[type="radio"]:checked::before {
+        width: 0.625rem; /* Inner circle remains consistent */
+        height: 0.625rem; /* Inner circle remains consistent */
+    }
+    .form-image img {
+        width: 18.5rem;
+    }
 }
 @media(max-width:871px){
+    body { 
+        margin: 1em 3em; /* Adjusted for better spacing */
+        box-sizing: border-box;
+    }
+
+    .logo {
+        font-size: 1.1em; /* Increased logo size */
+    }
+    .nav-links {
+        font-size: 1em; /* Increased nav link font size */
+        gap: 0.5em; 
+    }
+    .contact-us-button {
+        font-size: 0.8em; 
+        padding: 0.6em 0.8em; 
+    }
+    .subset {
+        font-size: 0.5em;
+        padding-left: 2.5em; /* Adjusted padding */
+    }
     .grid div span {
         font-size: 1rem;
     }
@@ -391,8 +456,8 @@ button.submit-button {
     .radio input[type="radio"]:checked::before {
         content: "";
         display: block;
-        width: 7px;
-        height: 9px;
+        width: 0.563rem;
+        height: 0.563rem;
         background-color: #0057ff;
         border-radius: 50%;
         position: absolute;
@@ -415,11 +480,11 @@ button.submit-button {
     }
 
     .form-image img {
-        width: 10em;  
+        width: 15em;  
         height: 100%; 
         object-fit: contain; 
     }
-
+    
     .footer-section h3 {
         font-size: 1em;
     }
@@ -542,197 +607,33 @@ button.submit-button {
     }
     
 }
-@media (max-width: 780px) {
-    body { 
-        margin: 1em 3em; /* Adjusted for better spacing */
-        box-sizing: border-box;
-    }
-
+@media(max-width:720px){
     .logo {
-        font-size: 1em; /* Increased logo size */
+        font-size: 0.8em;
     }
     .nav-links {
-        font-size: 1em; /* Increased nav link font size */
-        gap: 0.5em; 
+        font-size: 0.7m;
+        gap: 0.4em; 
     }
     .contact-us-button {
-        font-size: 1em; 
-        padding: 0.8em 1em; 
-    }
-    .intro .text {
-        max-width: 80%;
+        font-size: 0.6em; 
+        padding: 0.6em 0.7em; 
     }
     .subset {
-        font-size: 0.4em;
-        padding-left: 2.6em;
-        display: inline;
+        font-size: 0.5em;
+        padding-top: 0.4em;
+        padding-left: 0em; /* Adjusted padding */
     }
-
+    .subset {
+        display: block; /* Moves the text to the next line */
+        width: 100%; /* Optional: ensures it takes full width */
+    }
     .intro .text h1 {
-        font-size: 1.8em; /* Slightly bigger heading */
-    }
-    .intro .text p {
-        font-size: 1em; /* Increased paragraph font size */
-        margin-bottom: -1.2em; 
+        font-size: 2.75rem; /* Converted from px to rem */
+        line-height: 1.2; /* Adjusts line spacing */
     }
 
-    .grid div span {
-        font-size: 0.8rem
-    }
-    .grid p{
-        font-size: 0.7rem;
-    }
-    .contact-form-container {
-        padding: 25px;
-    }
-
-    .contact-section h1 {
-        font-size: 1.8em;
-    }
-
-    .radio-label {
-        font-size: 1em;
-    }
-
-    .radio input[type="radio"] {
-        width: 18px;
-        height: 18px;
-    }
-
-    label {
-        margin-bottom: 8px;
-        font-size: 1em;
-    }
-
-    input[type="text"], input[type="email"], textarea {
-        width: 75%;
-        height: 45%;
-        padding: 8px;
-        font-size: 1em;
-        margin-bottom: 1.2em;
-        border-radius: 8px;
-    }
-
-    button.submit-button {
-        width: 85%;
-        padding: 10px;
-        font-size: 1em;
-    }
-
-    /* Image in form */
-    .form-image img {
-        width: 10em;  
-        height: 100%; 
-        object-fit: contain; 
-    }
-
-    /* Footer section */
-    .footer-section h3 {
-        font-size: 1em;
-    }
-
-    .footer-section p {
-        font-size: 1em;
-    }
-
-    .links {
-        font-size: 1em;
-        gap: 0.7em;
-    }
-
-    .social a img {
-        width: 1em;
-    }
-
-    .footer {
-        margin-top: 40px;
-        background-color: #2A7EF8;
-        border-radius: 45px;
-        padding: 35px 45px;
-        color: #fff;
-    }
-
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-    }
-
-    .footer-section {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .links {
-        font-size: 1em;
-        display: flex;
-        justify-content: center;
-        gap: 0.7em;
-        flex: 1;
-    }
-
-    .social {
-        display: flex;
-        justify-content: flex-end;
-        gap: 20px;
-    }
-
-    .social a img {
-        width: 1.2em;
-    }
-
-    .footer-section .right {
-        padding-right: 12px;
-    }
-
-    .footer-section input[type="email"] {
-        width: 7em; 
-        font-size: 1em;
-        padding: 8px;
-        border-radius: 10px;
-        border: 1px solid white;
-        background-color: #2A7EF8;
-        color: white;
-    }
-
-    .footer-section input[type="email"]::placeholder {
-        color: white;
-        opacity: 0.8;
-    }
-
-    .footer-section button {
-        padding: 6px 8px;
-        border-radius: 5px;
-    }
-
-    .footer-bottom {
-        font-size: 1em;
-        text-align: center;
-        border-top: 1px solid #A7A9BE;
-        padding-top: 12px;
-        margin-top: 12px;
-    }
-
-    .footer-section {
-        width: 100%;
-        padding: 0px;
-        margin-bottom: 12px;
-    }
-
-    .right {
-        padding-left: 1.5em;
-    }
-
-    .right button {
-        font-size: 0.8em;
-        margin-left: 1em;
-    }
-}
+}   
 @media(max-width: 735px) {
     /* Grid container adjustments */
     .grid {
@@ -769,10 +670,10 @@ button.submit-button {
         gap: 0.4em; 
     }
     .contact-us-button {
-        font-size: 0.6em; 
-        padding: 0.7em 0.8em; 
+        font-size: 0.5em; 
+        padding: 0.6em 0.7em; 
     }
-    
+
     .intro .text h1{
         font-size: 1.5em;
 
@@ -815,69 +716,69 @@ button.submit-button {
     }
 
     .contact-form-container{
-        padding:30px;
-    }
-    .contact-section h1{
-        font-size: 1.5em;
-    } 
+            padding:30px;
+        }
+        .contact-section h1{
+            font-size: 1.5em;
+        } 
+        
+        .contact-section {
+            padding-top: 1.4em;
+        }
     
-    .contact-section {
-        padding-top: 1.4em;
-    }
-
-    .radio-label {
-        font-size: 0.8em;
-    }
-
-    .radio input[type="radio"] {
-        width: 15px;
-        height: 15px;
-    }
-
-    label {
-        margin-bottom: 5px;
-        font-size: 0.8em;
-    } 
-
-    input[type="text"], input[type="email"], textarea {
-        width: 60%;
-        height: 40%;
-        padding: 5px;
-        font-size: 0.7em;
-        margin-bottom: 1em;
-        border-radius: 8px;
-    }
-    .radio input[type="radio"]:checked::before {
-        content: "";
-        display: block;
-        width: 5px;
-        height: 7px;
-        background-color: #0057ff; /* Blue inner circle */
-        border-radius: 50%;
-        position: absolute;
-    }
-
-    textarea {
-        padding: 5px; /* Adjust padding to reduce height */
-        font-size: 0.7em; /* Smaller font size */
-        height: 6em; /* Set a specific height to control the size */
-        margin-bottom: 15px; /* Adjust margin if needed */
-        border-radius: 8px;
-        background-color: #ffffff;
-        color: rgb(0, 0, 0);
-    }
-
-    button.submit-button {
-        width: 80%;
-        padding: 7px;
-        font-size: 0.6em;
-    }
-
-    .form-image img {
-            width: 8.5em;  
-            height: 100%; 
-            object-fit: contain; 
-    }
+        .radio-label {
+            font-size: 0.8em;
+        }
+    
+        .radio input[type="radio"] {
+            width: 15px;
+            height: 15px;
+        }
+    
+        label {
+            margin-bottom: 5px;
+            font-size: 0.8em;
+        } 
+    
+        input[type="text"], input[type="email"], textarea {
+            width: 60%;
+            height: 40%;
+            padding: 5px;
+            font-size: 0.7em;
+            margin-bottom: 1em;
+            border-radius: 8px;
+        }
+        .radio input[type="radio"]:checked::before {
+            content: "";
+            display: block;
+            width: 7px;
+            height: 7px;
+            background-color: #0057ff; /* Blue inner circle */
+            border-radius: 50%;
+            position: absolute;
+        }
+    
+        textarea {
+            padding: 5px; /* Adjust padding to reduce height */
+            font-size: 0.7em; /* Smaller font size */
+            height: 6em; /* Set a specific height to control the size */
+            margin-bottom: 15px; /* Adjust margin if needed */
+            border-radius: 8px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+        }
+    
+        button.submit-button {
+            width: 80%;
+            padding: 7px;
+            font-size: 0.6em;
+        }
+    
+        .form-image img {
+                width: 8.5em;  
+                height: 100%; 
+                object-fit: contain; 
+        }
     .footer-section h3
     {
      font-size: 0.8em;
@@ -1000,9 +901,35 @@ button.submit-button {
     .radio input[type="radio"]:checked::before {
         content: "";
         display: block;
-        width: 5px;
+        width: 7px;
+        height: 7px;    
+    }
+    input[type="text"], input[type="email"], textarea {
+        width: 60%;
+        height: 40%;
+        padding: 5px;
+        font-size: 0.7em;
+        margin-bottom: 1em;
+        border-radius: 8px;
+    }
+    .radio input[type="radio"]:checked::before {
+        content: "";
+        display: block;
+        width: 7px;
         height: 7px;
-    
+        background-color: #0057ff; /* Blue inner circle */
+        border-radius: 50%;
+        position: absolute;
+    }
+
+    textarea {
+        padding: 5px; /* Adjust padding to reduce height */
+        font-size: 0.7em; /* Smaller font size */
+        height: 4em; /* Set a specific height to control the size */
+        margin-bottom: 15px; /* Adjust margin if needed */
+        border-radius: 8px;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
     }
     .grid div span {
         font-size: 0.6rem;
