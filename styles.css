@@ -1820,8 +1820,8 @@ button.submit-button {
     
         .arrow-circle,
         .arrow-circle-1 {
-            width: 1.1em;
-            height: 1.1em;
+            width: 1.4em;
+            height: 1.4em;
             background-color: black;
             border-radius: 50%;
             display: flex;
@@ -1901,16 +1901,106 @@ button.submit-button {
 }
 @media (max-width: 400px){
     .logo {
-        font-size: 0.6em;
+        font-size: 0.5em;
     }
     .nav-links {
         font-size: 0.5em;
-        gap: 0.3em; 
+        gap: 0.7em; 
     }
     .contact-us-button {
-        font-size: 0.5em; 
-        padding: 0.6em 0.7em; 
+        font-size: 0.4.5em; 
+        padding: 0.4em 0.5em; 
     }
- 
+    .intro .text h1 {
+        font-size: 1.2rem; /* Converted from px to rem */
+    } 
+    .contact-section h1 {
+        font-size: 1.2rem;
+    }
+    .subset {
+        font-size: 0.6rem; /* Converted from px to rem */
+   
+    }
+    .intro .text h1 {
+        font-size: 0.95rem; /* 60px */
+    }
+    
+    .intro .text p {
+        font-weight: normal;
+        font-size: 0.5rem; /* 20px */
+        max-width: 8rem;
+    }
+
+    .intro button {
+        font-size: 0.5rem; /* 20px */
+    }
+    .Service {
+        padding-top: 0.1rem; /* 40px */
+    }
+    
+    .Service h1 {
+        font-size: 0.95rem; /* 40px */
+    }
+    .subset {
+        font-size: 0.48rem; /* Converted from px to rem */
+   
+    }
+    .card h2 {
+        font-size: 0.5rem; /* 24px */
+    }
+    .learn-more {
+        font-size: 0.5rem; /* 18px */
+    }
+    
+    .arrow-circle,
+    .arrow-circle-1 {
+        width: 1.5em; 
+        height: 1.5em; 
+        background-color: black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0.5em;
+    }
+    
+    .arrow-circle-1 {
+        background-color: white;
+    }
+    
+    .arrow {
+        color: white;
+        transform: rotate(-45deg);
+        font-size: 0.8em;
+    }
+    
+    .arrow-1 {
+        color: black;
+        transform: rotate(-45deg);
+        font-size: 0.8em;
+    }
+    .Aboutus h1 {
+        font-size: 0.95rem;
+    }
+    .info-text p {
+        font-size: 0.6rem; /* Paragraph font size */
+    }
+    .header h1 {
+        font-size: 0.95rem;
+        color: #FFFFFF;
+    }
+    .accordion-header h2 {
+        font-size: 0.95rem;
+        margin: 0;
+    }
+    
+    .accordion-content p {
+        font-size: 0.6rem;
+        color: #FFFFFF;
+        margin: 1.25rem 0;
+    }
+
+    
+    
 }
 
