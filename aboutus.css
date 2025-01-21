@@ -578,7 +578,7 @@ button.submit-button {
     }
     .nav-links {
         font-size: 1em; /* Increased nav link font size */
-        gap: 0.5em; 
+        gap: 0.9em; 
     }
     .contact-us-button {
         font-size: 0.8em; 
@@ -881,7 +881,7 @@ button.submit-button {
     }
     .nav-links {
         font-size: 0.7m;
-        gap: 0.4em; 
+        gap: 0.6em; 
     }
     .contact-us-button {
         font-size: 0.6em; 
@@ -975,7 +975,7 @@ button.submit-button {
     }
     .nav-links {
         font-size: 0.6em;
-        gap: 0.4em; 
+        gap: 0.8em; 
     }
     .contact-us-button {
         font-size: 0.5em; 
