@@ -114,6 +114,38 @@ html {
     max-width: 31.25rem; 
 }
 
+.title {
+    font-size: 3.5rem;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;  /* Centers horizontally */
+    align-items: center;  /* Centers vertically (if needed) */
+    width: 100%; /* Ensures it takes full width */
+    margin-top: 1.25rem; /* Optional spacing */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensures responsiveness */
+    height: auto; /* Keeps aspect ratio */
+    display: block; /* Fixes any inline spacing issue */
+}
+
+.text-box {
+    background-color: #292A33; /* Dark grey background */
+    padding: 1.25rem; /* 20px -> 1.25rem */
+    border-radius: 1.8rem; /* 10px -> 0.625rem */
+    width: 90%;
+    margin: 3.25rem auto; /* Auto centers horizontally */
+    text-align: justify;
+    font-family: Space Grotesk regular;
+    display: flex;
+    justify-content: center;  /* Centers text inside */
+    align-items: center;  /* Centers vertically */
+    flex-direction: column; /* Ensures content is stacked */
+}
+
 .second-container {
     display: flex;
     justify-content: center;
@@ -621,6 +653,13 @@ button.submit-button {
         margin-top: 5.625rem;
         margin-bottom: 6.375rem;
     }
+    .title {
+        font-size: 1.8em;
+    }
+    
+    .text-box {
+        font-size: 0.8em
+    }
     
     .box-wrapper {
         display: flex;
@@ -905,6 +944,10 @@ button.submit-button {
     .info-box .info-text p {
         font-size: 0.75em; /* Smaller paragraph text */
     }
+    
+    .text-box {
+        font-size: 0.8em
+    }
     .Service h1 {
         font-size: 1.4em; /* Reduced service heading size */
     }
@@ -968,8 +1011,6 @@ button.submit-button {
         margin: 0.8em 2.7em; /* 25px 55px */
         box-sizing: border-box; /* Ensures padding and margins don't add extra width */
     }
-  
-
     .logo {
         font-size: 0.7em;
     }
@@ -993,11 +1034,17 @@ button.submit-button {
     .second-container p{
         font-size: 0.6em;
     }
+    .title {
+        font-size: 1.3em;
+    }
     .info-box .info-text .h1{
         font-size: 0.8em;
     }
     .info-box .info-text .p{
         font-size: 0.6em;
+    }
+    .text-box {
+        font-size: 0.6em
     }
     .subset {
         font-size: 0.4em;
@@ -1322,6 +1369,12 @@ button.submit-button {
 @media (max-width: 420px){
         .intro .text h1 {
             font-size: 1.1em; 
+        }
+        .title {
+            font-size: 1.1em;
+        }
+        .text-box {
+            font-size: 0.6rem;
         }
         .second-container h2 {
             font-size: 1rem;
