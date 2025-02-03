@@ -127,9 +127,8 @@ html {
 }
 
 .image-container img {
-    max-width: 100%; /* Ensures responsiveness */
-    height: auto; /* Keeps aspect ratio */
-    display: block; /* Fixes any inline spacing issue */
+    width: 60%; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .text-box {
