@@ -597,7 +597,22 @@ button.submit-button {
     .form-image img {
         width: 18.5rem;
     }
+    .box.blue {
+        height: 26.125rem;
+    }
+    
+    /* Middle white box */
+    .box.white {
+        height: 29.125rem;
+    }
+    
+    /* Right black box */
+    .box.black {
+        height: 26.125rem;
+    }
+
 }
+
 @media (max-width: 871px) {
     body { 
         margin: 1em 3em; /* Adjusted for better spacing */
