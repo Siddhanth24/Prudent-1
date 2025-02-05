@@ -1,40 +1,76 @@
-const mysql = require("mysql2/promise");
+const express = require("express");
+const { Pool } = require("pg");
+const nodemailer = require("nodemailer");
 
-const pool = mysql.createPool({
-  host: "sql12.freesqldatabase.com",
-  user: "sql12760457",
-  password: "aTM7JAbXFi",
-  database: "sql12760457",
-  port: 3306,
-  waitForConnections: true,
-  connectionLimit: 5,
-  queueLimit: 0,
+const app = express();
+app.use(express.json());
+
+// Database connection (use the DATABASE_URL from Vercel)
+const pool = new Pool({
+  connectionString: "postgres://neondb_owner:npg_DN2KtQv7lWxs@ep-blue-tooth-a7arao3j-pooler.ap-southeast-2.aws.neon.tech/neondb?sslmode=require",
+  ssl: { rejectUnauthorized: false },
 });
 
-module.exports = async (req, res) => {
-  if (req.method !== "POST") {
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+// Email configuration
+const transporter = nodemailer.createTransport({
+  service: "gmail",
+  auth: {
+    user: "ruddhansika@gmail.com",
+    pass: "Thanuja1624!",
+  },
+});
 
+// Contact Form API
+app.post("/api/submit", async (req, res) => {
   const { name, email, message, option_selected } = req.body;
 
-  if (!name || !email || !message || !option_selected) {
-    return res.status(400).json({ error: "All fields are required" });
-  }
-
-  const query =
-    "INSERT INTO contacts (name, email, message, option_selected) VALUES (?, ?, ?, ?)";
+  const mailOptions = {
+    from: "ruddhansika@gmail.com",
+    to: "siddhanth.belliappa@gmail.com",
+    subject: `New Contact Form Submission - ${option_selected}`,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
+  };
 
   try {
-    const connection = await pool.getConnection(); // Get a connection from the pool
-    await connection.query(query, [name, email, message, option_selected]);
-    connection.release(); // Release the connection back to the pool
-
-    return res.status(200).json({ message: "Data saved successfully!" });
-  } catch (err) {
-    console.error("Database error: ", err);
-    return res.status(500).json({ error: "Failed to save data" });
+    await transporter.sendMail(mailOptions);
+    res.json({ message: "Form submitted and email sent!" });
+  } catch (error) {
+    console.error("Email sending error:", error);
+    res.status(500).json({ message: "Error sending email" });
   }
-};
+});
 
+// Subscription API (Save data in Neon PostgreSQL)
+app.post("/api/subscribe", async (req, res) => {
+  const { name, email, message, option_selected } = req.body;
 
+  if (!email) {
+    return res.status(400).json({ message: "Email is required" });
+  }
+
+  try {
+    const sql = `
+      INSERT INTO contacts (name, email, message, option_selected)
+      VALUES ($1, $2, $3, $4)
+    `;
+    const values = [
+      name || "Subscriber",
+      email,
+      message || "None",
+      option_selected || "Subscribe to Newsletter",
+    ];
+
+    await pool.query(sql, values);
+
+    res.status(200).json({ message: "Subscription successful! Thank you for subscribing." });
+  } catch (error) {
+    console.error("Error saving subscription:", error.message);
+    res.status(500).json({ message: "An error occurred while saving your subscription. Please try again later." });
+  }
+});
+
+// Start the server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
