@@ -1,12 +1,19 @@
 import { Resend } from 'resend';
-import { Client } from 'pg'; // Import PostgreSQL client
+import { Client } from 'pg'; 
+import dotenv from 'dotenv';
 
-// Initialize Resend with your API key
-const resend = new Resend('re_iPyA4iJJ_Nmi1yjbnfSyNpRZD7mWbaYUy');
+// Load environment variables
+dotenv.config();
 
-// Initialize PostgreSQL client using Vercel's environment variable for DATABASE_URL
+// Initialize Resend with the API key from environment variable
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+// Initialize PostgreSQL client using environment variable
 const client = new Client({
-  connectionString: process.env.DATABASE_URL, // Vercel will automatically use this from environment variables
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Needed for Neon.tech's hosted databases
+  },
 });
 
 client.connect();
@@ -18,8 +25,8 @@ const sendEmailAndSaveToDB = async (req, res) => {
   try {
     // Send email using Resend
     await resend.emails.send({
-      from: 'onboarding@resend.dev', // Replace with the sender's email address
-      to: 'siddhanth.belliappa@gmail.com', // Replace with the recipient's email address
+      from: 'onboarding@resend.dev',
+      to: 'info@prudentdubai.com',
       subject: `New Contact Form Submission - ${option_selected}`,
       html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p><p><strong>Option Selected:</strong> ${option_selected}</p>`,
     });
@@ -37,7 +44,7 @@ const sendEmailAndSaveToDB = async (req, res) => {
   }
 };
 
-// Example: Handling POST request to submit form data
+// Handling POST request to submit form data
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     await sendEmailAndSaveToDB(req, res);
