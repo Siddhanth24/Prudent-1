@@ -1,33 +1,47 @@
-const express = require("express");
-const sgMail = require('@sendgrid/mail');
+import { Resend } from 'resend';
+import { Client } from 'pg'; // Import PostgreSQL client
 
-const app = express();
-app.use(express.json());
+// Initialize Resend with your API key
+const resend = new Resend('re_iPyA4iJJ_Nmi1yjbnfSyNpRZD7mWbaYUy');
 
-// Set SendGrid API Key
-sgMail.setApiKey("N7aGDljKF7A.KNWpX3tZmr_uRxesp7ETscN4ebOtM26JUg6RxZZeCXc");
+// Initialize PostgreSQL client using Vercel's environment variable for DATABASE_URL
+const client = new Client({
+  connectionString: process.env.DATABASE_URL, // Vercel will automatically use this from environment variables
+});
 
-app.post("/api/submit", async (req, res) => {
+client.connect();
+
+// Function to send email and store data in PostgreSQL
+const sendEmailAndSaveToDB = async (req, res) => {
   const { name, email, message, option_selected } = req.body;
 
-  const msg = {
-    to: 'siddhanth.belliappa@gmail.com', // Destination email address
-    from: 'no-reply@yourdomain.com', // Your SendGrid verified sender email
-    subject: `New Contact Form Submission - ${option_selected}`,
-    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
-  };
-
   try {
-    await sgMail.send(msg);
-    res.json({ message: "Form submitted and email sent!" });
-  } catch (error) {
-    console.error("Email sending error:", error);
-    res.status(500).json({ message: "Error sending email" });
-  }
-});
+    // Send email using Resend
+    await resend.emails.send({
+      from: 'onboarding@resend.dev', // Replace with the sender's email address
+      to: 'siddhanth.belliappa@gmail.com', // Replace with the recipient's email address
+      subject: `New Contact Form Submission - ${option_selected}`,
+      html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p><p><strong>Option Selected:</strong> ${option_selected}</p>`,
+    });
 
-// Start Server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+    // Save form data to PostgreSQL database
+    await client.query(
+      'INSERT INTO contacts(name, email, message, option_selected) VALUES($1, $2, $3, $4)',
+      [name, email, message, option_selected]
+    );
+
+    res.json({ message: 'Form submitted and email sent successfully!' });
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ message: 'Error processing request' });
+  }
+};
+
+// Example: Handling POST request to submit form data
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    await sendEmailAndSaveToDB(req, res);
+  } else {
+    res.status(405).json({ message: 'Method Not Allowed' });
+  }
+}
