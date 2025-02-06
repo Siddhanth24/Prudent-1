@@ -1,24 +1,22 @@
-const express = require("express");
-const mysql = require("mysql2/promise");
+import { Resend } from 'resend';
+import { Client } from 'pg'; 
 
-const app = express();
+// Initialize Resend with the API key from environment variable
+const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Middleware for parsing JSON data
-app.use(express.json());
+// Initialize PostgreSQL client using environment variable
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Needed for Neon.tech's hosted databases
+  },
+});
 
-// Create a MySQL connection pool
-const dbConfig = {
-    host: "sql12.freesqldatabase.com",
-    user: "sql12756255",
-    password: "P5wXTUceKQ",
-    database: "sql12756255",
-    port: 3306,
-};
-const pool = mysql.createPool(dbConfig);
+client.connect();
 
 // Route to handle the subscription
-app.post("/api/subscribe", async (req, res) => {
-  const { name, email, message, option_selected } = req.body;
+const handleSubscription = async (req, res) => {
+  const { email, message } = req.body;
 
   // Validate required fields
   if (!email) {
@@ -26,30 +24,33 @@ app.post("/api/subscribe", async (req, res) => {
   }
 
   try {
-    // Insert subscription details into the database
-    const sql = `
-      INSERT INTO contacts (name, email, message, option_selected)
-      VALUES (?, ?, ?, ?)
-    `;
-    const values = [
-      name || "Subscriber", // Default name if none provided
-      email,
-      message || "None", // Default message if none provided
-      option_selected || "Subscribe to Newsletter",
-    ];
+    // Send subscription email using Resend
+    await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'info@prudentdubai.com',
+      subject: `New Subscription - Subscribe to newsletters`,
+      html: `<p><strong>Name:</strong> Subscriber</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message || 'None'}</p><p><strong>Option Selected:</strong> Subscribe to newsletters</p>`,
+    });
 
-    await pool.query(sql, values);
+    // Save subscription details to PostgreSQL database
+    await client.query(
+      'INSERT INTO contacts(name, email, message, option_selected) VALUES($1, $2, $3, $4)',
+      ["Subscriber", email, message || "None", "Subscribe to newsletters"]
+    );
 
     // Send success response
     res.status(200).json({ message: "Subscription successful! Thank you for subscribing." });
   } catch (error) {
-    console.error("Error saving subscription:", error.message);
+    console.error("Error processing subscription:", error.message);
     res.status(500).json({ message: "An error occurred while saving your subscription. Please try again later." });
   }
-});
+};
 
-// Start the server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+// Handling POST request to subscribe
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    await handleSubscription(req, res);
+  } else {
+    res.status(405).json({ message: 'Method Not Allowed' });
+  }
+}
