@@ -1,9 +1,5 @@
 import { Resend } from 'resend';
 import { Client } from 'pg'; 
-import dotenv from 'dotenv';
-
-// Load environment variables
-dotenv.config();
 
 // Initialize Resend with the API key from environment variable
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -39,8 +35,9 @@ const sendEmailAndSaveToDB = async (req, res) => {
 
     res.json({ message: 'Form submitted and email sent successfully!' });
   } catch (error) {
-    console.error('Error:', error);
-    res.status(500).json({ message: 'Error processing request' });
+    console.error('Error:', error.message);
+    console.error('Stack:', error.stack);
+    res.status(500).json({ message: 'Error processing request', error: error.message });
   }
 };
 
